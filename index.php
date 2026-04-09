@@ -25,7 +25,11 @@
     
     // sprint funksiyasi ile deger yazdirmaq olur,echo ile arasindaki ferq odur ki sprintf funkisyasi deyer qaytarir echo ise qaytarmir
                 //  string               deyer
-  sprintf("Ad: %s,Soyad: s%, Yas:%d", "Ali","Veli",30);  
+//   sprintf("Ad: %s,Soyad: s%, Yas:%d", "Ali","Veli",30);  
+
+//    file_put_contents -herhansisa bir fayl yaradib icerisine metin cap etmek ucun istifade olunur
+
+      file_put_contents('test.text' , "Hello World");
 
 
 ?>
