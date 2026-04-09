@@ -13,15 +13,20 @@
 
 // echo "hemide turkan";
 
-  echo "<pre>"; 
-      print_r(
-          [
-               'ad'=> 'Ali',
-               'soyad'=> 'Veli',
-                'yas'=> 30
-          ]
-      );
-     echo "<pre>";
+//   echo "<pre>"; 
+//       print_r(
+//           [
+//                'ad'=> 'Ali',
+//                'soyad'=> 'Veli',
+//                 'yas'=> 30
+//           ]
+//       );
+//      echo "<pre>";
+    
+    // sprint funksiyasi ile deger yazdirmaq olur,echo ile arasindaki ferq odur ki sprintf funkisyasi deyer qaytarir echo ise qaytarmir
+                //  string               deyer
+  sprintf("Ad: %s,Soyad: s%, Yas:%d", "Ali","Veli",30);  
+
 
 ?>
 
