@@ -227,13 +227,20 @@
 
         // $ad2='Hemide';
 
-       $bir=5;
-       $iki=&$bir;
-       $iki=10;
+    //    $bir=5;
+    //    $iki=&$bir;
+    //    $iki=10;
 
 
-       echo $bir . "<br>";
-       echo $iki . "<br>";
+    //    echo $bir . "<br>";
+    //    echo $iki . "<br>";
+
+
+    $number1=5;
+
+    if($number1 > 10){
+        echo "Reqem 10-dan boyukdur";
+    }
 
 
 
