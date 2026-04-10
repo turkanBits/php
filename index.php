@@ -69,19 +69,32 @@
 
     // EOL-heredok cox setrli metnler ucun istifade olunur alt alt metnleri ekrana cap etmek ucun istifade olunur
 
-    $metn2='Bob';
+    // $metn2='Bob';
 
-    $ekranaYazdir = <<<EOL
-    Salam $metn2 sdhfosif
-    fdsojabgfdl
-    segahkrjdsf'
-    sdagfvnakas
-    fashvfslkdf
-    sdvjadf;
-    EOL;
+    // $ekranaYazdir = <<<EOL
+    // Salam $metn2 sdhfosif
+    // fdsojabgfdl
+    // segahkrjdsf'
+    // sdagfvnakas
+    // fashvfslkdf
+    // sdvjadf;
+    // EOL;
 
-    echo $ekranaYazdir; 
+    // echo $ekranaYazdir; 
    
+    // arraya ozumzude deyer teyin ede bilirik proqramda deyer teyin ede bilir
+
+    $var1=6;
+    $var2=3.14;
+    $var3=true;
+    $var4='Ali';
+    $var5=[];
+
+    echo gettype($var1) . "<br>";
+    echo gettype($var2) . "<br>";
+    echo gettype($var3) . "<br>";
+    echo gettype($var4) . "<br>";
+    echo gettype($var5) . "<br>";
 
 
 
