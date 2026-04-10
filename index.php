@@ -192,7 +192,10 @@ $result26 = $undefinedVariable ?? "degisken tanimlanmamis";
    
     $name=null;
 
-    print_r($name);
+    $defaultName ="Hemide Turkani injidir";
+
+    $result26=$name ?? $defaultName;
+    echo $result26;
 ?>
 
 
