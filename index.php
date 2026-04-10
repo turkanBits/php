@@ -185,17 +185,27 @@
 // ternary operatoru, şərtə görə dəyər qaytarır
 // $result25 = ($age > 18) ? "Yasiniz 18-dən böyük" : "Yasiniz 18-dən kiçik"; 
 
-$result26 = $undefinedVariable ?? "degisken tanimlanmamis";
+// $result26 = $undefinedVariable ?? "degisken tanimlanmamis";
 
-// Operand
-// operator
+// // Operand
+// // operator
    
-    $name=null;
+//     $name=null;
 
-    $defaultName ="Hemide Turkani injidir";
+//     $defaultName ="Hemide Turkani injidir";
 
-    $result26=$name ?? $defaultName;
-    echo $result26;
+//     $result26=$name ?? $defaultName;
+//     echo $result26;
+
+
+    // echo 0xA+0xF;
+
+    $x =5;
+    // degeri yazdirib sonra 1 artirir
+    echo $x++;   
+    echo "<br>"
+    // degeri 1 artirib sonra yazdirir
+    echo ++$x;
 ?>
 
 
