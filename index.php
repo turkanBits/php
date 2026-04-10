@@ -261,7 +261,7 @@
 ?>
 
 
-  <?php         $sert=6; if ($sert ==5):         ?>
+  <!-- <?php         $sert=6; if ($sert ==5):         ?>
 
        <h1>Birinci sert yerine yetirildi</h1>
 
@@ -280,13 +280,29 @@
 
 
 
-<!-- <script>
+
+
+
+
+
+
+
+     <!-- <script>
     let a = {
         'ad': 'Ali'
       'soyad':'Veli'    JAVA SCRIPT
       'yas': 30
     }
-</script> -->
+</script> --> -->
+
+
+<?php  $loggedIn = true;?>
+
+<?php if ($loggedIn == true): ?>
+    <p>Hesabiniza xoş gəlmisiniz</p>
+<?php else: ?>
+    <p>Zehmet olmasa daxil olun!</p>
+<?php endif; ?>
 
 
 
