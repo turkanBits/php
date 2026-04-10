@@ -312,9 +312,23 @@
     
     <?php  
         // indexli array tanimlama
-      $fruits=['alma','armud','heyva',['qarpiz','kavun','nar' ,5,true]];
+    //   $fruits=['alma','armud','heyva',['qarpiz','kavun','nar' ,5,true]];
 
-    print_r($fruits[3]) . "<br>";
+    // print_r($fruits[3]) . "<br>";
+
+    
+$user = [
+    'ad' => 'Ali',
+    'soyad' => 'Veli',
+    'yas' => 30,
+    'adres' => [
+        'seher' => 'Baki',
+        'kuce' => 'Nizami',
+        'evNo' => 10
+    ]
+];
+
+echo $user['adres']['seher'] . "<br>"; 
     
     
     
