@@ -99,30 +99,64 @@
 
 //    OPEARTORLAR
     // toplama
-   $result1 =5+3;  
+//    $result1 =5+3;  
 
 //    cixma
-   $result2 =5-3;
+//    $result2 =5-3;
 
 //    vurma
-   $result3 =5*3;
+//    $result3 =5*3;
 
 //    bolme
-   $result4 =5/3;
+//    $result4 =5/3;
 
 //    qaliqli bolme
-   $result5 =5%3;
+//    $result5 =5%3;
 
-   print ("Toplama:" . $result1 . "<br>");
-   print ("Cixma:" . $result2 . "<br>");
-   print ("Vurma:" . $result3 . "<br>");
-   print ("Bolme:" .  $result4 . "<br>");
-   print ("Mod:" .  $result5 . "<br>");
+//    print ("Toplama:" . $result1 . "<br>");
+//    print ("Cixma:" . $result2 . "<br>");
+//    print ("Vurma:" . $result3 . "<br>");
+//    print ("Bolme:" .  $result4 . "<br>");
+//    print ("Mod:" .  $result5 . "<br>");
+
+    
+// $result6 bərabərlik operatoru, dəyərlər bərabərdirsə true, deyilsə false qaytarır
+// $result7 eynilik (identik) operatoru, dəyərlər və tiplər eynidirsə true, deyilsə false qaytarır
+// $result8 bərabər deyil operatoru, dəyərlər fərqlidirsə true, eynidirsə false qaytarır
+// $result9 eyni deyil (identik deyil) operatoru, dəyərlər və tiplər fərqlidirsə true, eynidirsə false qaytarır
+// $result10 böyükdür operatoru, dəyərlərdən biri digərindən böyükdürsə true, əks halda false qaytarır
+// $result11 kiçikdir operatoru, dəyərlərdən biri digərindən kiçikdirsə true, əks halda false qaytarır
+// $result12 böyük və ya bərabərdir operatoru, böyük və ya bərabərdirsə true, kiçikdirsə false qaytarır
+// $result13  kiçik və ya bərabərdir operatoru, kiçik və ya bərabərdirsə true, böyükdürsə false qaytarır
+// $result14  // spaceship operatoru, əgər dəyərlər bərabərdirsə 0 qaytarır,birinci dəyər ikinci dəyərdən böyükdürsə 1 qaytarır,birinci dəyər ikinci dəyərdən kiçikdirsə -1 qaytarır
 
 
+     $result6 =(5 == 5);
+     $result7 =(5 === "5");
+     $result8 =(5 != 3);
+     $result9 =(5 !== "5");
+     $result10 =(5 > 3);
+     $result11 =(5 < 3);
+     $result12 =(5 >= 5);
+     $result13 =(5 <= 3);
 
+      $result14 =(5 <=> 3);
+
+
+      print($result6 . "<br>");
+      print($result7 . "<br>");
+      print($result8 . "<br>");
+      print($result9 . "<br>");
+      print($result10 . "<br>");
+      print($result11 . "<br>");
+      print($result12 . "<br>");
+      print($result13 . "<br>");
+      print($result14 . "<br>");
 
 ?>
+
+
+
 
 
 <!-- <script>
