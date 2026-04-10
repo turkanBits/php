@@ -178,14 +178,21 @@
 // $result22 = (5 << 1);  // bitwise left shift operatoru, bitləri sola sürüşdürür, sona 0 əlavə edir
 // $result23 = (5 >> 1);  // bitwise right shift operatoru, bitləri sağa sürüşdürür
 
-$result24 = "Hello" . " " . "World!";  // string birləşdirmə (concat) operatoru, iki stringi birləşdirir
+// $result24 = "Hello" . " " . "World!";  // string birləşdirmə (concat) operatoru, iki stringi birləşdirir
 
 
-$age = 20;
+// $age = 20;
 // ternary operatoru, şərtə görə dəyər qaytarır
-$result25 = ($age > 18) ? "Yasiniz 18-dən böyük" : "Yasiniz 18-dən kiçik"; 
+// $result25 = ($age > 18) ? "Yasiniz 18-dən böyük" : "Yasiniz 18-dən kiçik"; 
 
+$result26 = $undefinedVariable ?? "degisken tanimlanmamis";
 
+// Operand
+// operator
+   
+    $name=null;
+
+    print_r($name);
 ?>
 
 
