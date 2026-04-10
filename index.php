@@ -158,11 +158,15 @@
 // və ya (OR) operatoru, hər iki dəyər false olarsa false, digər hallarda true qaytarır
 // deyil (NOT) operatoru, dəyər true-dursa false, false-dursa true qaytarır
 
-    $result15=(true && false);
-    $result15=(true || false);
-    $result15=(!true);
-    
+    // $result15=(true && false);
+    // $result15=(true || false);
+    // $result15=(!true);
 
+    
+    
+       $x = 5;
+       $x += 1;  // $x dəyərini 1 artırır, $x = 6 olur
+       $x++;     // $x dəyərini 1 artırır, $x = 7 olur
 
 ?>
 
