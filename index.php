@@ -317,18 +317,39 @@
     // print_r($fruits[3]) . "<br>";
 
     
-$user = [
-    'ad' => 'Ali',
-    'soyad' => 'Veli',
-    'yas' => 30,
-    'adres' => [
-        'seher' => 'Baki',
-        'kuce' => 'Nizami',
-        'evNo' => 10
-    ]
-];
+// $user = [
+//     'ad' => 'Ali',
+//     'soyad' => 'Veli',
+//     'yas' => 30,
+//     'adres' => [
+//         'seher' => 'Baki',
+//         'kuce' => 'Nizami',
+//         'evNo' => 10
+//     ]
+// ];
 
-echo $user['adres']['seher'] . "<br>"; 
+// echo $user['adres']['seher'] . "<br>"; 
+
+
+ $students = [
+     [
+        'ad' => 'Ali',
+        'soyad' => 'Veli',
+        'yas' => 30
+     ],
+     [
+        'ad' => 'Ayse',
+        'soyad' => 'Fatma',
+        'yas' => 25
+     ],
+     [
+        'ad' => 'Mehmet',
+        'soyad' => 'Ahmet',
+        'yas' => 35
+     ]
+   ];
+
+     echo $students[1]['ad'] . "<br>"; 
     
     
     
