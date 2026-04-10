@@ -63,12 +63,25 @@
     
 // tek dirnaq icersine degiskenler yazila bilmez,\n ise yeni setr simvoludur
 
-    $metn1='Bob';
-    echo 'Salam $metn1\n';
+  
     
     // cut dirnaq icersinde degiskenler yazila biler \n ise yeni setir simvoludur
-    $metn2="Bob";
-    echo "Salam $metn1\n";
+
+    // EOL-heredok cox setrli metnler ucun istifade olunur alt alt metnleri ekrana cap etmek ucun istifade olunur
+
+    $metn2='Bob';
+
+    $ekranaYazdir = <<<EOL
+    Salam $metn2 sdhfosif
+    fdsojabgfdl
+    segahkrjdsf'
+    sdagfvnakas
+    fashvfslkdf
+    sdvjadf;
+    EOL;
+
+    echo $ekranaYazdir; 
+   
 
 
 
