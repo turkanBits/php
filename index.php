@@ -296,15 +296,26 @@
 </script> --> 
 
 
-<?php  $loggedIn = false;?>
+<!-- <?php  $loggedIn = false;?>
 
 <?php if ($loggedIn): ?>
     <p>Hesabiniza xoş gəlmisiniz</p>
 <?php else: ?>
     <p>Zehmet olmasa daxil olun!</p>
 <?php endif; ?>
+ -->
 
 
+ <script>
+    function Person (name,age) {
+        this.name = name;
+        this.age=age;
+    }
+
+    let sexiyyet = new Person("Ali",30);
+
+
+</script>
 
 
 </body>
