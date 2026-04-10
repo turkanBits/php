@@ -31,22 +31,29 @@
 
     //   file_put_contents('test.text' , "Hello World");
 
-
-
    
+    //   $name="Ali";
+    //   $age=20;
+    //   $isActive=true;
+    //   $balance=100.50;
+    //   $x=null;
+     
+    //    $var1=$var2=$var3= "Hello World";   birden cox deyisken qebul ede bilir
+     
+    //  en son verilen deyer evvl verilen deyerin uzerine yazilir
 
     // $name="Ali";
-    // $Name="Ali";
-   
-      $name="Ali";
-      $age=20;
-      $isActive=true;
-      $balance=100.50;
-      $x=null;
-     
-       $var1=$var2=$var3= "Hello World";   birden cox deyisken qebul ede bilir
-     
+    // $name="Veli";     
+
+    // echo $name;
+
+
+
+    // const - kodda deyismez demekdir.const -la teyin edilen deyeri deyismek mumkun deyil
  
+     const PI=3.14;
+
+     echo PI;
 
 
 ?>
