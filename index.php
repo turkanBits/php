@@ -306,6 +306,22 @@
  -->
 
 
+ <!-- assosativ -->
+  <!-- array[] -->
+   <!-- [] -->
+    
+    <?php  
+        // indexli array tanimlama
+      $fruits=['alma','armud','heyva',['qarpiz','kavun','nar' ,5,true]];
+
+    print_r($fruits[3]) . "<br>";
+    
+    
+    
+    
+    ?>
+     
+
  <script>
     function Person (name,age) {
         this.name = name;
