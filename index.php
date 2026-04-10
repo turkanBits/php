@@ -58,8 +58,15 @@
     // const hem global hem class icinde istifade edilir ancaq funksiya icinde istifade edilmez
     // define() hem global hemde funskiya icinde istifade edilir ancaq class icinde istifade edile bilmez
      
-    define("PI",3.14);
-    echo PI;
+    // 
+    
+    // tek dirnaq icersine degiskenler yazila bilmez,\n ise yeni setr simvoludur
+
+    $metn1='Bob';
+    echo 'Salam $metn1\n' 
+
+
+
 
 ?>
 
