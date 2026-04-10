@@ -9,7 +9,7 @@
     <!-- sol teref acarlar    sag teref deyerler -->
      <!-- print sade stringler ucundur   print r ise arraylari ve obyektleri cap etmek ucundur -->
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
-<?php
+   <?php
 
 // echo "hemide turkan";
 
@@ -236,26 +236,46 @@
     //    echo $iki . "<br>";
 
 
-    $number1=5;
+//     $number1=5;
 
-    if ($number1 > 10) {
-    echo "Reqem 10-dan boyukdur";
-} elseif ($number1 == 10) {
-    if ($number1 % 2 == 0) {
-        echo "Reqem 10-dur ve cutdur";
-    } else {
-        echo "Reqem 10-dur ve tekdir";
-    }
-} else {
-    echo "Reqem 10-dan kicikdir";
-}
-
-
+//     if ($number1 > 10) {
+//     echo "Reqem 10-dan boyukdur";
+// } elseif ($number1 == 10) {
+//     if ($number1 % 2 == 0) {
+//         echo "Reqem 10-dur ve cutdur";
+//     } else {
+//         echo "Reqem 10-dur ve tekdir";
+//     }
+// } else {
+//     echo "Reqem 10-dan kicikdir";
+// }
 
 
+// $number1 = 100;
+
+// if ($number1 > 10) 
+//     echo "Reqem 10-dan boyukdur";
+// else 
+//     echo "Reqem 10-dan kicikdir";
 
 ?>
 
+
+  <?php         $sert=5; if ($sert ==5):         ?>
+
+       <h1>Birinci sert yerine yetirildi</h1>
+
+
+   <?php      elseif ($sert>5):        ?> 
+
+        <h1>Ikinci sert yerine yetirildi</h1>   
+
+
+    <?php       else:                     ?> 
+
+        <h1>Hecbir sert yerine yetirilmedi</h1>  
+
+     <?php       endif; ?>     
 
 
 
