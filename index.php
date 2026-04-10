@@ -293,12 +293,12 @@
       'soyad':'Veli'    JAVA SCRIPT
       'yas': 30
     }
-</script> --> -->
+</script> --> 
 
 
-<?php  $loggedIn = true;?>
+<?php  $loggedIn = false;?>
 
-<?php if ($loggedIn == true): ?>
+<?php if ($loggedIn): ?>
     <p>Hesabiniza xoş gəlmisiniz</p>
 <?php else: ?>
     <p>Zehmet olmasa daxil olun!</p>
