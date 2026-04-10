@@ -51,10 +51,15 @@
 
     // const - kodda deyismez demekdir.const -la teyin edilen deyeri deyismek mumkun deyil
  
-     const PI=3.14;
+    //  const PI=3.14;
 
-     echo PI;
+    //  echo PI;
 
+    // const hem global hem class icinde istifade edilir ancaq funksiya icinde istifade edilmez
+    // define() hem global hemde funskiya icinde istifade edilir ancaq class icinde istifade edile bilmez
+     
+    define("PI",3.14);
+    echo PI;
 
 ?>
 
