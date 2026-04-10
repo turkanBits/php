@@ -200,12 +200,22 @@
 
     // echo 0xA+0xF;
 
-    $x =5;
-    // degeri yazdirib sonra 1 artirir
-    echo $x++;   
-    echo "<br>"
-    // degeri 1 artirib sonra yazdirir
-    echo ++$x;
+    // $x =5;
+    // // degeri yazdirib sonra 1 artirir
+    // echo $x++;   
+    // echo "<br>"
+    // // degeri 1 artirib sonra yazdirir
+    // echo ++$x;
+
+    // goto
+
+    echo "Ilk setrin baslangici <br>";
+    goto skip;
+
+    echo "bu setr addanacaq";
+
+    skip:
+    echo "son setr yazdirilacaqdir";
 ?>
 
 
