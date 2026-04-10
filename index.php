@@ -238,10 +238,17 @@
 
     $number1=5;
 
-    if($number1 > 10){
-        echo "Reqem 10-dan boyukdur";
+    if ($number1 > 10) {
+    echo "Reqem 10-dan boyukdur";
+} elseif ($number1 == 10) {
+    if ($number1 % 2 == 0) {
+        echo "Reqem 10-dur ve cutdur";
+    } else {
+        echo "Reqem 10-dur ve tekdir";
     }
-
+} else {
+    echo "Reqem 10-dan kicikdir";
+}
 
 
 
