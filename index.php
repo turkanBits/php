@@ -261,7 +261,7 @@
 ?>
 
 
-  <?php         $sert=5; if ($sert ==5):         ?>
+  <?php         $sert=6; if ($sert ==5):         ?>
 
        <h1>Birinci sert yerine yetirildi</h1>
 
