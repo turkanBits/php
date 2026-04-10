@@ -209,13 +209,37 @@
 
     // goto
 
-    echo "Ilk setrin baslangici <br>";
-    goto skip;
+    // echo "Ilk setrin baslangici <br>";
+    // goto skip;
 
-    echo "bu setr addanacaq";
+    // echo "bu setr addanacaq";
 
-    skip:
-    echo "son setr yazdirilacaqdir";
+    // skip:
+    // echo "son setr yazdirilacaqdir";
+
+
+
+
+     
+    //  &-referans operatoru-bir deyiseninn referansini basqa bir deyisene teyin etmeye imkan verir 
+
+        // $ad='Turkan';
+
+        // $ad2='Hemide';
+
+       $bir=5;
+       $iki=&$bir;
+       $iki=10;
+
+
+       echo $bir . "<br>";
+       echo $iki . "<br>";
+
+
+
+
+
+
 ?>
 
 
