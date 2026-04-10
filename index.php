@@ -60,11 +60,15 @@
      
     // 
     
-    // tek dirnaq icersine degiskenler yazila bilmez,\n ise yeni setr simvoludur
+    
+// tek dirnaq icersine degiskenler yazila bilmez,\n ise yeni setr simvoludur
 
     $metn1='Bob';
-    echo 'Salam $metn1\n' 
-
+    echo 'Salam $metn1\n';
+    
+    // cut dirnaq icersinde degiskenler yazila biler \n ise yeni setir simvoludur
+    $metn2="Bob";
+    echo "Salam $metn1\n";
 
 
 
