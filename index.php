@@ -10,16 +10,28 @@
      <!-- print sade stringler ucundur   print r ise arraylari ve obyektleri cap etmek ucundur -->
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
  <?php
-
-   function test() {
-       $a=5;
-       $b=10;
+  
+   function test($a,$b) {
        $c= $a * $b;
        echo $c;
    }
 
 
-   test();
+   test(3,4);
+
+
+
+
+
+//    function test() {
+//        $a=5;
+//        $b=10;
+//        $c= $a * $b;
+//        echo $c;
+//    }
+
+
+//    test();
 
 
 
