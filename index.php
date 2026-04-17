@@ -9,47 +9,26 @@
     <!-- sol teref acarlar    sag teref deyerler -->
      <!-- print sade stringler ucundur   print r ise arraylari ve obyektleri cap etmek ucundur -->
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
-   <?php
-  
-  for($i=5, $j=0;   $i>0,$j<5;   $i--,$j++){
-
-    echo "$i - $j <br>";
+ <?php
+ 
+  $fruits=['alma','armud','banan','nar','heyva'];
+   
+  foreach($fruits as $fruit) {
+    echo $fruit . "<br>";
   }
 
 
 
+//   for(;;) {
+//      echo "Sonsuz dongu"
+//   }
+
+//   for($i=5, $j=0;   $i>0,$j<5;   $i--,$j++){
+
+//     echo "$i - $j <br>";
+//   }
 
 //    undefined-yoxdur.bunun evezine NULL tipi vardir.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -58,11 +37,11 @@
     //  $var2="Hello world";
     //  $var3=[];
 
-    //  echo is_init($var)? "Integer":"Not Integer";
+    //  echo is_int($var)? "Integer":"Not Integer";
     //  echo "<br>"
-    //  echo is_string($var2)? "String" : "Not String";
+    //  echo is_string($var)? "String" : "Not String";
     //  echo "<br>"
-    //  echo is_array($var2)? "Array" : "Not Array";
+    //  echo is_array($var)? "Array" : "Not Array";
 
 
 // is_int($var) → tamədəd
