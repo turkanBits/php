@@ -11,6 +11,66 @@
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
    <?php
 
+    //  is_ funksiyalari-php-de mueyyen bir tipin ollub olmadigini yoxlamaq ucun is ile baslayan funksiyalar var.
+     $var1=5;
+     $var2="Hello world";
+     $var3=[];
+
+     echo is_init($var)? "Integer":"Not Integer";
+     echo "<br>"
+     echo is_string($var2)? "String" : "Not String";
+     echo "<br>"
+     echo is_array($var2)? "Array" : "Not Array";
+
+
+// is_int($var) → tamədəd
+// is_string($var) → mətn
+// is_array($var) → massiv
+// is_bool($var) → true,false
+// is_float($var) → kesr ededi
+// is_double($var) → kesr ededi
+// is_null($var) → boş
+// is_object($var) → obyekt
+
+
+
+    is_int($var);  
+    is_string($var);
+    is_array($var);
+    is_bool($var);
+    is_float($var);
+    is_double($var);
+    is_null($var);
+    is_object($var);
+
+    is_resource($var);
+
+    // fayl resurslari
+    // verilenler bazasi elaqeleri
+    // sebeke elaqeleri    // 
+    // cURL (http sorgulari ucun istifade olunur)
+    // sql query resurslari
+    // reskil resurslari
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // echo "hemide turkan";
 
 //   echo "<pre>"; 
@@ -331,25 +391,25 @@
 // echo $user['adres']['seher'] . "<br>"; 
 
 
- $students = [
-     [
-        'ad' => 'Ali',
-        'soyad' => 'Veli',
-        'yas' => 30
-     ],
-     [
-        'ad' => 'Ayse',
-        'soyad' => 'Fatma',
-        'yas' => 25
-     ],
-     [
-        'ad' => 'Mehmet',
-        'soyad' => 'Ahmet',
-        'yas' => 35
-     ]
-   ];
+//  $students = [
+//      [
+//         'ad' => 'Ali',
+//         'soyad' => 'Veli',
+//         'yas' => 30
+//      ],
+//      [
+//         'ad' => 'Ayse',
+//         'soyad' => 'Fatma',
+//         'yas' => 25
+//      ],
+//      [
+//         'ad' => 'Mehmet',
+//         'soyad' => 'Ahmet',
+//         'yas' => 35
+//      ]
+//    ];
 
-     echo $students[1]['ad'] . "<br>"; 
+//      echo $students[1]['ad'] . "<br>"; 
     
     
     
