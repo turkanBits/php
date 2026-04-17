@@ -10,16 +10,35 @@
      <!-- print sade stringler ucundur   print r ise arraylari ve obyektleri cap etmek ucundur -->
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
  <?php
- 
+
   $fruits=[
-       "ad1"=>"Elcin",
-       "ad2"=>"Leyla",
+       "Auto"=>['dodge','mercedes','audi','bmw'],
+       "Samalyot"=>['boeing','airbus','embraer'],
+       "Gemi"=>['titanic','queen mary','ever given'],
     
     ];
    
-  foreach($fruits as $key => $value) {
-    echo $key . "=>" .$value . "<br>";
+  foreach($fruits as $key => $arrays) {
+       echo "<b> $key </b>";
+
+   foreach($arrays as $value) {
+       echo "<li>$value</li>";
+   }
+
+   echo "<br>";
+
+
   }
+ 
+//   $fruits=[
+//        "ad1"=>"Elcin",
+//        "ad2"=>"Leyla",
+    
+//     ];
+   
+//   foreach($fruits as $key => $value) {
+//     echo $key . "=>" .$value . "<br>";
+//   }
 
 
 
