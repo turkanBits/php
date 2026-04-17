@@ -10,17 +10,59 @@
      <!-- print sade stringler ucundur   print r ise arraylari ve obyektleri cap etmek ucundur -->
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
    <?php
+  
+  for($i=0; $i<10 ; $i++){
+
+    echo $i . PHP_EOL;
+  }
+
+
+
+
+//    undefined-yoxdur.bunun evezine NULL tipi vardir.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     //  is_ funksiyalari-php-de mueyyen bir tipin ollub olmadigini yoxlamaq ucun is ile baslayan funksiyalar var.
-     $var1=5;
-     $var2="Hello world";
-     $var3=[];
+    //  $var1=5;
+    //  $var2="Hello world";
+    //  $var3=[];
 
-     echo is_init($var)? "Integer":"Not Integer";
-     echo "<br>"
-     echo is_string($var2)? "String" : "Not String";
-     echo "<br>"
-     echo is_array($var2)? "Array" : "Not Array";
+    //  echo is_init($var)? "Integer":"Not Integer";
+    //  echo "<br>"
+    //  echo is_string($var2)? "String" : "Not String";
+    //  echo "<br>"
+    //  echo is_array($var2)? "Array" : "Not Array";
 
 
 // is_int($var) → tamədəd
@@ -34,16 +76,16 @@
 
 
 
-    is_int($var);  
-    is_string($var);
-    is_array($var);
-    is_bool($var);
-    is_float($var);
-    is_double($var);
-    is_null($var);
-    is_object($var);
+    // is_int($var);  
+    // is_string($var);
+    // is_array($var);
+    // is_bool($var);
+    // is_float($var);
+    // is_double($var);
+    // is_null($var);
+    // is_object($var);
 
-    is_resource($var);
+    // is_resource($var);
 
     // fayl resurslari
     // verilenler bazasi elaqeleri
