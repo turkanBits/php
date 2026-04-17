@@ -11,13 +11,13 @@
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
  <?php
   
-   function test($a,$b) {
+   function test( int $a, int|float $b) {
        $c= $a * $b;
        echo $c;
    }
 
 
-   test(3,4);
+   test(3,4.3);
 
 
 
