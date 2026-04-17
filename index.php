@@ -11,15 +11,30 @@
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
  <?php
 
-    $i=0;
+     try {
+       
+      throw  new Exception ("Bu bir xeta mesajidir");
 
-      do{
-         echo "$i <br>";
+     }catch(Exception $e){
 
-        $i++;
-    }
+        echo "Xeta:" . $e->getMessage() . "<br>" ;
+
+     } finally {
+       
+        echo "Istisna olsada olmasada isleyen kod bloku";
+     }
+  
+
+
+    // $i=0;
+
+    //   do{
+    //      echo "$i <br>";
+
+    //     $i++;
+    // }
     
-    while($i<10) 
+    // while($i<10) 
 
 
 
