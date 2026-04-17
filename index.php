@@ -11,17 +11,24 @@
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
  <?php
 
-     $i=0;
-      while(    $i<10   ){
-       echo "$i <br>";
+    $i=0;
 
-       $i++;
-  }
+      do{
+         echo "$i <br>";
+
+        $i++;
+    }
     
+    while($i<10) 
 
 
 
+//      $i=0;
+//       while(    $i<10   ){
+//        echo "$i <br>";
 
+//        $i++;
+//   }
 //   $fruits=[
 //        "Auto"=>['dodge','mercedes','audi','bmw'],
 //        "Samalyot"=>['boeing','airbus','embraer'],
