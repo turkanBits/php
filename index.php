@@ -11,22 +11,38 @@
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
  <?php
 
-   for($i=0; $i<10; $i++){
+   function test() {
+       $a=5;
+       $b=10;
+       $c= $a * $b;
+       echo $c;
+   }
 
-      switch($i){
 
-        case 2:
-            echo "Bu 2-dir <br>";
-          continue 2;
+   test();
 
-        case 3:
-            echo "Bu 3-dir <br>";
-            break;   
-      }
+
+
+
+
+
+
+//    for($i=0; $i<10; $i++){
+
+//       switch($i){
+
+//         case 2:
+//             echo "Bu 2-dir <br>";
+//           continue 2;
+
+//         case 3:
+//             echo "Bu 3-dir <br>";
+//             break;   
+//       }
  
 
-            echo "Dovr: $i <br>";
-     }
+//             echo "Dovr: $i <br>";
+//      }
 
 
 
