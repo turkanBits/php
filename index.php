@@ -11,13 +11,32 @@
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
  <?php
 
-    for($i=0; $i<10; $i++){
-        if($i==5){
-            continue;
-        }
+   for($i=0; $i<10; $i++){
 
-        echo "$i <br>";
-    }
+      switch($i){
+
+        case 2:
+            echo "Bu 2-dir <br>";
+          continue 2;
+
+        case 3:
+            echo "Bu 3-dir <br>";
+            break;   
+      }
+ 
+
+            echo "Dovr: $i <br>";
+     }
+
+
+
+    // for($i=0; $i<10; $i++){
+    //     if($i==5){
+    //         continue;
+    //     }
+
+    //     echo "$i <br>";
+    // }
 
 
 
