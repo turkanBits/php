@@ -11,9 +11,9 @@
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
    <?php
   
-  for($i=0; $i<10 ; $i++){
+  for($i=5, $j=0;   $i>0,$j<5;   $i--,$j++){
 
-    echo $i . PHP_EOL;
+    echo "$i - $j <br>";
   }
 
 
