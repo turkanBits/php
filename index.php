@@ -11,24 +11,35 @@
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
  <?php
 
-   $fruit="alma";
+    for($i=0; $i<10; $i++){
+        if($i==5){
+            continue;
+        }
 
-   switch($fruit){
-      case "alma";
-         echo "Bu bir almadir";
-         break;
+        echo "$i <br>";
+    }
+
+
+
+
+//    $fruit="alma";
+
+//    switch($fruit){
+//       case "alma";
+//          echo "Bu bir almadir";
+//          break;
        
-      case "armud";
-         echo "Bu bir armuddur";
-         break;
+//       case "armud";
+//          echo "Bu bir armuddur";
+//          break;
          
-       case "heyva";
-          echo "Bu bir heyvadir";
-          break;
+//        case "heyva";
+//           echo "Bu bir heyvadir";
+//           break;
           
-        default:
-           echo "Bu bir meycve degildir";  
-   }
+//         default:
+//            echo "Bu bir meycve degildir";  
+//    }
 
 
 
