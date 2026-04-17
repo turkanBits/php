@@ -11,17 +11,39 @@
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
  <?php
 
-    try{
-      $number=5;
+   $fruit="alma";
 
-      if($number > 10){
-        echo "Reqem 10-dan boyukdur";
-      } else {
-        throw new Exception ("Reqem 10-dan kicikdir");
-      }
-    }catch(Exception $e){
-      echo "Xeta: " . $e->getMessage() . "<br>";
-    }
+   switch($fruit){
+      case "alma";
+         echo "Bu bir almadir";
+         break;
+       
+      case "armud";
+         echo "Bu bir armuddur";
+         break;
+         
+       case "heyva";
+          echo "Bu bir heyvadir";
+          break;
+          
+        default:
+           echo "Bu bir meycve degildir";  
+   }
+
+
+
+
+    // try{
+    //   $number=15;
+
+    //   if($number > 10){
+    //     echo "Reqem 10-dan boyukdur";
+    //   } else {
+    //     throw new Exception ("Reqem 10-dan kicikdir");
+    //   }
+    // }catch(Exception $e){
+    //   echo "Xeta: " . $e->getMessage() . "<br>";
+    // }
 
 
 
