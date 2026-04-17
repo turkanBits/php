@@ -11,10 +11,14 @@
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
  <?php
  
-  $fruits=['alma','armud','banan','nar','heyva'];
+  $fruits=[
+       "ad1"=>"Elcin",
+       "ad2"=>"Leyla",
+    
+    ];
    
-  foreach($fruits as $fruit) {
-    echo $fruit . "<br>";
+  foreach($fruits as $key => $value) {
+    echo $key . "=>" .$value . "<br>";
   }
 
 
