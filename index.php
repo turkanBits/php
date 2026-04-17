@@ -11,24 +11,35 @@
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
  <?php
 
-  $fruits=[
-       "Auto"=>['dodge','mercedes','audi','bmw'],
-       "Samalyot"=>['boeing','airbus','embraer'],
-       "Gemi"=>['titanic','queen mary','ever given'],
-    
-    ];
-   
-  foreach($fruits as $key => $arrays) {
-       echo "<b> $key </b>";
+     $i=0;
+      while(    $i<10   ){
+       echo "$i <br>";
 
-   foreach($arrays as $value) {
-       echo "<li>$value</li>";
-   }
-
-   echo "<br>";
-
-
+       $i++;
   }
+    
+
+
+
+
+//   $fruits=[
+//        "Auto"=>['dodge','mercedes','audi','bmw'],
+//        "Samalyot"=>['boeing','airbus','embraer'],
+//        "Gemi"=>['titanic','queen mary','ever given'],
+    
+//     ];
+   
+//   foreach($fruits as $key => $arrays) {
+//        echo "<b> $key </b>";
+
+//    foreach($arrays as $value) {
+//        echo "<li>$value</li>";
+//    }
+
+//    echo "<br>";
+
+
+//   }
  
 //   $fruits=[
 //        "ad1"=>"Elcin",
