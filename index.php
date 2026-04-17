@@ -11,18 +11,33 @@
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
  <?php
 
-     try {
+    try{
+      $number=5;
+
+      if($number > 10){
+        echo "Reqem 10-dan boyukdur";
+      } else {
+        throw new Exception ("Reqem 10-dan kicikdir");
+      }
+    }catch(Exception $e){
+      echo "Xeta: " . $e->getMessage() . "<br>";
+    }
+
+
+
+
+    //  try {
        
-      throw  new Exception ("Bu bir xeta mesajidir");
+    //   throw  new Exception ("Bu bir xeta mesajidir");
 
-     }catch(Exception $e){
+    //  }catch(Exception $e){
 
-        echo "Xeta:" . $e->getMessage() . "<br>" ;
+    //     echo "Xeta:" . $e->getMessage() . "<br>" ;
 
-     } finally {
+    //  } finally {
        
-        echo "Istisna olsada olmasada isleyen kod bloku";
-     }
+    //     echo "Istisna olsada olmasada isleyen kod bloku";
+    //  }
   
 
 
