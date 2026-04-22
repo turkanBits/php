@@ -10,17 +10,36 @@
      <!-- print sade stringler ucundur   print r ise arraylari ve obyektleri cap etmek ucundur -->
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
  <?php
+    // &-referans simvolu
 
-      $factor=3;
+    $v=3;
 
-       $funksiya =function($number) {
+    $funksiya2= function () use ($v){
+
+        echo $v +=10;
+        echo '<br>';
+    };
+
+
+    $funksiya2();
+
+    echo $v  . '<br>';
+
+
+
+
+
+
+    //   $factor=3;
+
+    //    $funksiya =function($number) {
             
-            global $factor ;
-            echo $number * $factor ."<br>";
+    //         global $factor ;
+    //         echo $number * $factor ."<br>";
 
-       };
+    //    };
 
-       $funksiya(5);
+    //    $funksiya(5);
 
     // Anonim funskiyalar-CLOUSER
 
