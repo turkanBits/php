@@ -11,16 +11,26 @@
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
  <?php
 
+      $factor=3;
+
+       $funksiya =function($number) {
+            
+            global $factor ;
+            echo $number * $factor ."<br>";
+
+       };
+
+       $funksiya(5);
 
     // Anonim funskiyalar-CLOUSER
 
-    $funskiyaAdi=function($param) {
+    // $funskiyaAdi=function($param) {
       
-        echo $param * 2 . "<br>";
+    //     echo $param * 2 . "<br>";
 
 
-    };
-    $funskiyaAdi(5);
+    // };
+    // $funskiyaAdi(5);
    
 
 
