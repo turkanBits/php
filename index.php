@@ -11,17 +11,14 @@
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
  <?php
 
-    // lokal ve global funsksiyalar
+    // $GLOBALS
 
-      $x=5;
-      $y=10;
+    $x=7;
+    $y=8;
+    function cemiHesabla(){
 
-    function cemiHesabla() {
-       
-        global $x, $y;
-        $cem = $x + $y;
-        echo "Cem: " .$cem ."<br>";
-
+        $cem = $GLOBALS ['x'] + $GLOBALS ['y'];
+         echo "Cem: " . $cem . "<br>";
     }
 
     cemiHesabla();
@@ -32,8 +29,20 @@
 
 
 
+    // lokal ve global funsksiyalar
 
+    //   $x=5;
+    //   $y=10;
 
+    // function cemiHesabla() {
+       
+    //     global $x, $y;
+    //     $cem = $x + $y;
+    //     echo "Cem: " .$cem ."<br>";
+
+    // }
+
+    // cemiHesabla();
 
 
 
