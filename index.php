@@ -11,14 +11,41 @@
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
  <?php
 
-     function test($ad) {
-        
-        echo "Salam $ad <br>";
+    // lokal ve global funsksiyalar
 
-      }
+      $x=5;
+      $y=10;
+
+    function cemiHesabla() {
+       
+        global $x, $y;
+        $cem = $x + $y;
+        echo "Cem: " .$cem ."<br>";
+
+    }
+
+    cemiHesabla();
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //  function test($ad) {
+        
+    //     echo "Salam $ad <br>";
+
+    //   }
      
-     $funskiyaAdi = 'test';
-     $funskiyaAdi("Elcin");
+    //  $funskiyaAdi = 'test';
+    //  $funskiyaAdi("Elcin");
 
 
   
