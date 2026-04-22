@@ -11,17 +11,34 @@
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
  <?php
 
+
+    // Anonim funskiyalar-CLOUSER
+
+    $funskiyaAdi=function($param) {
+      
+        echo $param * 2 . "<br>";
+
+
+    };
+    $funskiyaAdi(5);
+   
+
+
+
+
+
+
     // $GLOBALS
 
-    $x=7;
-    $y=8;
-    function cemiHesabla(){
+    // $x=7;
+    // $y=8;
+    // function cemiHesabla(){
 
-        $cem = $GLOBALS ['x'] + $GLOBALS ['y'];
-         echo "Cem: " . $cem . "<br>";
-    }
+    //     $cem = $GLOBALS ['x'] + $GLOBALS ['y'];
+    //      echo "Cem: " . $cem . "<br>";
+    // }
 
-    cemiHesabla();
+    // cemiHesabla();
 
 
 
