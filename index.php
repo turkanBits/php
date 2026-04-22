@@ -10,14 +10,25 @@
      <!-- print sade stringler ucundur   print r ise arraylari ve obyektleri cap etmek ucundur -->
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
  <?php
+
+     function test($ad) {
+        
+        echo "Salam $ad <br>";
+
+      }
+     
+     $funskiyaAdi = 'test';
+     $funskiyaAdi("Elcin");
+
+
   
-   function test( int $a, int|float $b) {
-       $c= $a * $b;
-       echo $c;
-   }
+//    function test( int $a, int|float $b) {
+//        $c= $a * $b;
+//        echo $c;
+//    }
 
 
-   test(3,4.3);
+//    test(3,4.3);
 
 
 
@@ -588,14 +599,14 @@
     
     ?>
      
-
+<!-- 
  <script>
     function Person (name,age) {
         this.name = name;
         this.age=age;
     }
 
-    let sexiyyet = new Person("Ali",30);
+    let sexiyyet = new Person("Ali",30); -->
 
 
 </script>
