@@ -11,20 +11,30 @@
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
  <?php
 
+    // ...
+    function ureyinIstiyenQeder(...$items){
+        foreach($items as $item){
+            echo $item . "<br>";
+        }
+    }
+
+    ureyinIstiyenQeder("alma","amrud","heyva","ciyelek","portaqali")
+
+
 
     // recursiv funksiya
 
-    function faktorial($n){
-        if($n==0){
-          return 1;
-        }
+    // function faktorial($n){
+    //     if($n==0){
+    //       return 1;
+    //     }
 
 
-          return $n * faktorial ($n-1);
+    //       return $n * faktorial ($n-1);
         
-    }
+    // }
 
-    echo faktorial(5);
+    // echo faktorial(5);
     
 
     // function topla ($a,$b){
