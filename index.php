@@ -10,16 +10,38 @@
      <!-- print sade stringler ucundur   print r ise arraylari ve obyektleri cap etmek ucundur -->
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
  <?php
-      
+       
+    //   &-referal 
+
+     $m=2;
+
+     $numune=fn(&$eded)=>$eded +=20;
+
+     echo $numune($m) . "<br>";
+
+     echo $m;
+
+
+
+
+    // oxlu funksiyalar xarici deyisenleri avtomatik ozlerine baglayir
+
+    //  $n=9;
+
+    //  $test=fn($param)=>$param * $n;
+
+    //  echo $test(5) . "<br>";
+    //   echo $n;
+
+
+
+
+
 
     // PHP   7.4
-
     // FN-oxlu funksiyani yaratmaq ucun istifade olunur.esas xususiyyeti bir setirde yazila bilir deyerleri avtomatik return edir.
-
-    $oxluAnonimFUnkiya=fn($number) => $number *2;
-
-
-    $oxluAnonimFUnkiya(5);
+    // $oxluAnonimFUnkiya=fn($number) => $number *2;
+    // $oxluAnonimFUnkiya(5);
 
 
 
