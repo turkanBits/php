@@ -11,19 +11,33 @@
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
  <?php
 
+
+    // recursiv funksiya
+
+    function faktorial($n){
+        if($n==0){
+          return 1;
+        }
+
+
+          return $n * faktorial ($n-1);
+        
+    }
+
+    echo faktorial(5);
     
 
-    function topla ($a,$b){
-        return $a + $b;
-    }
+    // function topla ($a,$b){
+    //     return $a + $b;
+    // }
 
  
 
-      function cix ($a,$b){
-        return topla($a,$b) - topla($a,$b);
-    }
+    //   function cix ($a,$b){
+    //     return topla($a,$b) - topla($a,$b);
+    // }
 
-     echo cix(10,5);
+    //  echo cix(10,5);
 
 
 
