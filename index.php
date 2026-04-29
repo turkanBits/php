@@ -11,14 +11,23 @@
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
  <?php
 
-    // ...
-    function ureyinIstiyenQeder(...$items){
-        foreach($items as $item){
-            echo $item . "<br>";
-        }
+    function sumNumbers(...$numbers) {
+        return array_sum($numbers);
     }
 
-    ureyinIstiyenQeder("alma","amrud","heyva","ciyelek","portaqali")
+    $numbers=[1,2,3,4,5];
+
+    echo sumNumbers(...$numbers);
+
+
+    // ...
+    // function ureyinIstiyenQeder(...$items){
+    //     foreach($items as $item){
+    //         echo $item . "<br>";
+    //     }
+    // }
+
+    // ureyinIstiyenQeder("alma","amrud","heyva","ciyelek","portaqali")
 
 
 
