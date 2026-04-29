@@ -10,20 +10,32 @@
      <!-- print sade stringler ucundur   print r ise arraylari ve obyektleri cap etmek ucundur -->
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
  <?php
+      
+
+    // PHP   7.4
+
+    // FN-oxlu funksiyani yaratmaq ucun istifade olunur.esas xususiyyeti bir setirde yazila bilir deyerleri avtomatik return edir.
+
+    $oxluAnonimFUnkiya=fn($number) => $number *2;
+
+
+    $oxluAnonimFUnkiya(5);
+
+
+
     // &-referans simvolu
+    // $v=3;
 
-    $v=3;
+    // $funksiya2= function () use ($v){
 
-    $funksiya2= function () use ($v){
-
-        echo $v +=10;
-        echo '<br>';
-    };
+    //     echo $v +=10;
+    //     echo '<br>';
+    // };
 
 
-    $funksiya2();
+    // $funksiya2();
 
-    echo $v  . '<br>';
+    // echo $v  . '<br>';
 
 
 
