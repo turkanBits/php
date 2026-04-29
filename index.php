@@ -10,16 +10,33 @@
      <!-- print sade stringler ucundur   print r ise arraylari ve obyektleri cap etmek ucundur -->
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
  <?php
+
+    
+
+    function topla ($a,$b){
+        return $a + $b;
+    }
+
+ 
+
+      function cix ($a,$b){
+        return topla($a,$b) - topla($a,$b);
+    }
+
+     echo cix(10,5);
+
+
+
        
     //   &-referal 
 
-     $m=2;
+    //  $m=2;
 
-     $numune=fn(&$eded)=>$eded +=20;
+    //  $numune=fn(&$eded)=>$eded +=20;
 
-     echo $numune($m) . "<br>";
+    //  echo $numune($m) . "<br>";
 
-     echo $m;
+    //  echo $m;
 
 
 
