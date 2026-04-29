@@ -11,13 +11,23 @@
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
  <?php
 
-    function sumNumbers(...$numbers) {
-        return array_sum($numbers);
-    }
+     function printLanguages($a,$b,$c){
+        echo "Programming languages: $a,$b,$c <br>";
+     }
 
-    $numbers=[1,2,3,4,5];
+     $Languages=["Phython","JavaScript","PHP"];
 
-    echo sumNumbers(...$numbers);
+    printLanguages(...$Languages);
+
+    
+
+    // function sumNumbers(...$numbers) {
+    //     return array_sum($numbers);
+    // }
+
+    // $numbers=[1,2,3,4,5];
+
+    // echo sumNumbers(...$numbers);
 
 
     // ...
