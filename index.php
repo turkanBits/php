@@ -4,35 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
+    
+     <!-- require,include,require_once,include_once -->
+
+        <?php require_once 'header.php'; ?>
+
+        <main>
+            <p>Welcome to my website!</p>
+        </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- sol teref acarlar    sag teref deyerler -->
      <!-- print sade stringler ucundur   print r ise arraylari ve obyektleri cap etmek ucundur -->
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
  <?php
 
-      $ad="Ali";
 
-       function test() {
-        global $ad;
-        echo "Salam $ad <br>";
-      }
+    //   $ad="Ali";
 
-      function test2() {
-        $ad="Veli";
-        echo "Salam $ad <br>";
-      }
+    //    function test() {
+    //     global $ad;
+    //     echo "Salam $ad <br>";
+    //   }
 
-      function test3() {
-        static $eded=0;
-        $eded++;
+    //   function test2() {
+    //     $ad="Veli";
+    //     echo "Salam $ad <br>";
+    //   }
 
-        echo $eded . "<br>";
-      }
+    //   function test3() {
+    //     static $eded=0;
+    //     $eded++;
 
-      test3();
-      test3();
-      test3();
+    //     echo $eded . "<br>";
+    //   }
+
+    //   test3();
+    //   test3();
+    //   test3();
 
 
 
