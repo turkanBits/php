@@ -11,13 +11,41 @@
       <!-- oz yazdigimiz acarlar varsa obyektdir   proqram ozu teyin edirse arraydir -->
  <?php
 
-     function printLanguages($a,$b,$c){
-        echo "Programming languages: $a,$b,$c <br>";
-     }
+      $ad="Ali";
 
-     $Languages=["Phython","JavaScript","PHP"];
+       function test() {
+        global $ad;
+        echo "Salam $ad <br>";
+      }
 
-    printLanguages(...$Languages);
+      function test2() {
+        $ad="Veli";
+        echo "Salam $ad <br>";
+      }
+
+      function test3() {
+        static $eded=0;
+        $eded++;
+
+        echo $eded . "<br>";
+      }
+
+      test3();
+      test3();
+      test3();
+
+
+
+
+
+
+    //  function printLanguages($a,$b,$c){
+    //     echo "Programming languages: $a,$b,$c <br>";
+    //  }
+
+    //  $Languages=["Phython","JavaScript","PHP"];
+
+    // printLanguages(...$Languages);
 
     
 
