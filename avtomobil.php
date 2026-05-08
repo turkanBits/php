@@ -21,6 +21,9 @@
           $this->name=$name;
           $this->age=$age;
 
+      }
+
+      public function sayHello(){
 
          echo  "My name is  {$this->name} and I am {$this->age}years old.<br> ";
 
@@ -31,9 +34,11 @@
 
 
     $person1 = new Person ("Turkan",21);
-    $person1 = new Person ("Hemide",24);
+    $person2 = new Person ("Hemide",24);
 
 
+    $person1->sayHello();
+    $person2->sayHello();
 
 
 
