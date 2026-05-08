@@ -9,38 +9,36 @@
 
 
 
-    class Person {
+// __destruct()-parametr qebul etmir
 
-      public $name;
-      public $age;
+    class FileHander{
+   
+      private $file;
 
+      public function __construct($filename) {
 
+        $this->file =fopen($filename, "w");
 
-      public function __construct ($name,$age) {
- 
-          $this->name=$name;
-          $this->age=$age;
-
-      }
-
-      public function sayHello(){
-
-         echo  "My name is  {$this->name} and I am {$this->age}years old.<br> ";
+        echo "File opened successfully:$filename\n";
 
       }
+
+
+      public function __destruct() {
+
+        fclose($this->file);
+        echo "File closed successfuly.\n";
+      }
+
+
     }
 
+    $fileHandler = new FileHander ("test.txt");
+
+     
 
 
-
-    $person1 = new Person ("Turkan",21);
-    $person2 = new Person ("Hemide",24);
-
-
-    $person1->sayHello();
-    $person2->sayHello();
-
-
+    
 
 
 
