@@ -1,4 +1,13 @@
 <?php
+  //  Php de konstruktor ve destruktor obyektin heyat dovrunun muxtelif merhelelerinde ise dusen xususi metodlardir.
+    
+//  PHP DE OBYEKTIN HEYAT DOVRU 3 MERHELEDEN IBARETDIR.
+//  1.obyektin yaradilmasi - instantiation
+//  2.obyektin istifadesi-object usage
+//  3.obeyktin mehv edilmesi-destruction
+
+
+
 
     class Person {
 
@@ -7,21 +16,24 @@
 
 
 
-      public function introduce () {
-         echo  "My name is " . $this->name .  " and I am " .  $this->age .   " years old. ";
+      public function __construct ($name,$age) {
+ 
+          $this->name=$name;
+          $this->age=$age;
+
+
+         echo  "My name is  {$this->name} and I am {$this->age}years old.<br> ";
 
       }
     }
 
-    $person1 = new Person();
-    $person1->name =  "Jhon" ;
-    $person1->age  =  30;
-
-    $person1->introduce();
 
 
 
-    
+    $person1 = new Person ("Turkan",21);
+    $person1 = new Person ("Hemide",24);
+
+
 
 
 
