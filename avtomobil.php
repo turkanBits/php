@@ -1,5 +1,80 @@
 <?php
 
+class ParentClass {
+
+  protected $info = "This is a parent class. <br>";
+
+  protected function showInfo() {
+      echo "This is a protected method in the parent class.";
+      
+
+   }
+
+
+
+}
+
+
+
+
+class ChildClass extends ParentClass {
+  
+  public function accessProtected(){
+
+    echo $this->info;
+    $this->showInfo();
+
+
+  }
+
+
+
+
+}
+
+$child=new ChildClass();
+
+$child->accessProtected();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Access Modifiers
 
   // public-hem class icinde hem class colunde el catan olur.her yerde istifade edile bilir en genis giris icazesine  sahibdir
@@ -21,23 +96,23 @@
 
   // inheritance-irsiyyet.
 
-  class test{
-    public $name = "Jhon Doe";
+  // class test{
+  //   public $name = "Jhon Doe";
 
-    public function sayHello() {
+  //   public function sayHello() {
 
-      echo "Hello,my name is" . $this->name;
+  //     echo "Hello,my name is" . $this->name;
 
-    }
-
-
+  //   }
 
 
-  }
 
-  $test = new Test();
-  echo $test->name;
-  $test->sayHello()
+
+  // }
+
+  // $test = new Test();
+  // echo $test->name;
+  // $test->sayHello()
 
 
 
