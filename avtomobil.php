@@ -1,50 +1,110 @@
 <?php
 
+// Overriding
+
+class Animal {
+  public function sound() {
+    echo "Animal makes a sound.";
+
+  }
+
+
+}
+
+class Cat extends Animal {
+
+  public function sound() {
+    echo "Cat meows.";
+
+  }
+}
+
+$cat= new Cat();
+$cat->sound();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // inheridance-extends(acar soz)
 
   // Parent class(super class,base class)
   // child class (sub class,derived class)
 
 
-  class Animal {
-    public $name;
+  // class Animal {
+  //   public $name;
 
 
-    public function eat() {
-      echo $this->name . " Animal is eating.<br>";
-    }
+  //   public function eat() {
+  //     echo $this->name . " Animal is eating.<br>";
+  //   }
 
 
-  }
+  // }
 
-  class Dog extends Animal{
+  // class Dog extends Animal{
     
-     public function bark() {
-      echo $this->name . "Dog is barking.<br>";
+  //    public function bark() {
+  //     echo $this->name . "Dog is barking.<br>";
 
-     }
+  //    }
      
-  }
+  // }
 
-  class Cat extends Animal{
+  // class Cat extends Animal{
     
-     public function meow() {
-      echo $this->name . "Cat is meowing.<br>";
+  //    public function meow() {
+  //     echo $this->name . "Cat is meowing.<br>";
       
-     }
+  //    }
      
-  }
+  // }
 
-  $dog=new Dog();
-  $dog->name="Rex ";
-  $dog->eat();
-  $dog->bark();
+  // $dog=new Dog();
+  // $dog->name="Rex ";
+  // $dog->eat();
+  // $dog->bark();
 
 
-  $cat=new Cat();
-  $cat->name="Doby ";
-  $cat->eat();
-  $cat->meow();
+  // $cat=new Cat();
+  // $cat->name="Doby ";
+  // $cat->eat();
+  // $cat->meow();
 
 
 
