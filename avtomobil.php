@@ -1,34 +1,38 @@
 <?php
 
-//parent ::
+// Access Modifiers ve Inheritance
 
-class Animal {
-  public function sound() {
-    echo "Animal makes a sound.";
-
-  }
-
-
-}
-
-class Cat extends Animal {
-
-  public function sound() {
+class ParentClass{
  
-    parent::sound();
+  public $publicVar="Public";
+  protected $protectedVar="Protected";
+  private $privateVar="Private";
 
-    echo "Cat meows.";
+  public function showVars(){
+ 
+    echo $this->publicVar . '<br>';
+    echo $this->protectedVar . '<br>';
+    echo $this->privateVar . '<br>';
+  
 
+  } 
+
+}
+
+
+
+class ChildClass extends ParentClass{
+
+  public function showParentVars() {
+      echo $this->publicVar     . '<br>';
+      echo $this->protectedVar   . '<br>';
+      // echo $this->privateVar . '<br>';
   }
 }
 
-$cat= new Cat();
-$cat->sound();
 
-
-
-
-
+$c=new ChildClass();
+$c->showParentVars();
 
 
 
