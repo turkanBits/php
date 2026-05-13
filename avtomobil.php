@@ -1,16 +1,50 @@
 <?php
 
- class Math {
+// inheridance-extends(acar soz)
 
-   public static function add ($a,$b){
-    return $a+$b;
-   }
-   
- }
+  // Parent class(super class,base class)
+  // child class (sub class,derived class)
 
 
- $result=Math::add(5,10);
-echo "The result of addition is:" .$result;
+  class Animal {
+    public $name;
+
+
+    public function eat() {
+      echo $this->name . " Animal is eating.<br>";
+    }
+
+
+  }
+
+  class Dog extends Animal{
+    
+     public function bark() {
+      echo $this->name . "Dog is barking.<br>";
+
+     }
+     
+  }
+
+  class Cat extends Animal{
+    
+     public function meow() {
+      echo $this->name . "Cat is meowing.<br>";
+      
+     }
+     
+  }
+
+  $dog=new Dog();
+  $dog->name="Rex ";
+  $dog->eat();
+  $dog->bark();
+
+
+  $cat=new Cat();
+  $cat->name="Doby ";
+  $cat->eat();
+  $cat->meow();
 
 
 
@@ -41,8 +75,22 @@ echo "The result of addition is:" .$result;
 
 
 
+//  class User {
 
+//    public static $userCount=0;
+  
+//    public function __construct()
+//    {
+//      self::$userCount++;
+//    }
 
+//   }
+
+//    $user1=new User();
+//    $user2=new User();
+
+//    echo "Istifadeci sayi: " .User::$userCount;
+  
 
 // static keyword-class obyekt yaradilmadan istifade edile biler.
 
