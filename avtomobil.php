@@ -1,6 +1,6 @@
 <?php
 
-// Overriding
+//parent ::
 
 class Animal {
   public function sound() {
@@ -14,6 +14,9 @@ class Animal {
 class Cat extends Animal {
 
   public function sound() {
+ 
+    parent::sound();
+
     echo "Cat meows.";
 
   }
