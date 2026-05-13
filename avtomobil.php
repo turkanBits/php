@@ -1,38 +1,91 @@
 <?php
 
-// Access Modifiers ve Inheritance
-
-class ParentClass{
- 
-  public $publicVar="Public";
-  protected $protectedVar="Protected";
-  private $privateVar="Private";
-
-  public function showVars(){
- 
-    echo $this->publicVar . '<br>';
-    echo $this->protectedVar . '<br>';
-    echo $this->privateVar . '<br>';
-  
-
-  } 
+class A {
+  public function methodA() {
+    echo "Bu class A-dan gelir .<br>";
+  }
 
 }
 
-
-
-class ChildClass extends ParentClass{
-
-  public function showParentVars() {
-      echo $this->publicVar     . '<br>';
-      echo $this->protectedVar   . '<br>';
-      // echo $this->privateVar . '<br>';
+class B extends A {
+   public function methodB() {
+    echo "Bu class B-den gelir .<br>";
   }
 }
 
 
-$c=new ChildClass();
-$c->showParentVars();
+class C extends B {
+   public function methodC() {
+    echo "Bu class C-den gelir .<br>";
+  }
+}
+
+class D extends C {
+   public function methodD() {
+    echo "Bu class D-den gelir .<br>";
+  }
+}
+
+$d = new D ();
+
+$d->methodA();
+$d->methodB();
+$d->methodC();
+$d->methodD();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Access Modifiers ve Inheritance
+
+// class ParentClass{
+ 
+//   public $publicVar="Public";
+//   protected $protectedVar="Protected";
+//   private $privateVar="Private";
+
+//   public function showVars(){
+ 
+//     echo $this->publicVar . '<br>';
+//     echo $this->protectedVar . '<br>';
+//     echo $this->privateVar . '<br>';
+  
+
+//   } 
+
+// }
+
+
+
+// class ChildClass extends ParentClass{
+
+//   public function showParentVars() {
+//       echo $this->publicVar     . '<br>';
+//       echo $this->protectedVar   . '<br>';
+//       // echo $this->privateVar . '<br>';
+//   }
+// }
+
+
+// $c=new ChildClass();
+// $c->showParentVars();
 
 
 
