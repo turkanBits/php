@@ -1,24 +1,74 @@
 <?php
 
-class Test {
+// static keyword-class obyekt yaradilmadan istifade edile biler.
 
-  private $info = "This is a private class. <br>";
+// static property ve metodlar-classa mexsusdur.
 
-  private function showInfo() {
-      echo "This is a private method in the parent class.";
-      
+// this acar sozu ile istiade edile bilmez evezinde sekf ve ya static istifade oluna biler.
 
-   }
+class Counter {
+  public static $count =0;
 
-   public function displayInfo() {
-       echo $this->info;
-       $this->showinfo();
-   }
 
+  public static function increment() {
+    self::$count++;
+  }
 }
 
-$test=new Test();
-$test->displayInfo();
+$a = new Counter ();
+
+
+Counter::increment();
+Counter::increment();
+echo Counter::$count;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class Test {
+
+//   private $info = "This is a private class. <br>";
+
+//   private function showInfo() {
+//       echo "This is a private method in the parent class.";
+      
+
+//    }
+
+//    public function displayInfo() {
+//        echo $this->info;
+//        $this->showinfo();
+//    }
+
+// }
+
+// $test=new Test();
+// $test->displayInfo();
 
 
 
