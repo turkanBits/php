@@ -1,54 +1,70 @@
 <?php
 
+ class Math {
+
+   public static function add ($a,$b){
+    return $a+$b;
+   }
+   
+ }
+
+
+ $result=Math::add(5,10);
+echo "The result of addition is:" .$result;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // static keyword-class obyekt yaradilmadan istifade edile biler.
 
 // static property ve metodlar-classa mexsusdur.
 
 // this acar sozu ile istiade edile bilmez evezinde sekf ve ya static istifade oluna biler.
 
-class Counter {
-  public static $count =0;
+// class Counter {
+//   public static $count =0;
 
 
-  public static function increment() {
-    self::$count++;
-  }
-}
+//   public static function increment() {
+//     self::$count++;
+//   }
+// }
 
-$a = new Counter ();
-
-
-Counter::increment();
-Counter::increment();
-echo Counter::$count;
+// $a = new Counter ();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Counter::increment();
+// Counter::increment();
+// echo Counter::$count;
 
 // class Test {
 
