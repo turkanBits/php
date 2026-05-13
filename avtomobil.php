@@ -1,43 +1,24 @@
 <?php
 
-class ParentClass {
+class Test {
 
-  protected $info = "This is a parent class. <br>";
+  private $info = "This is a private class. <br>";
 
-  protected function showInfo() {
-      echo "This is a protected method in the parent class.";
+  private function showInfo() {
+      echo "This is a private method in the parent class.";
       
 
    }
 
-
-
-}
-
-
-
-
-class ChildClass extends ParentClass {
-  
-  public function accessProtected(){
-
-    echo $this->info;
-    $this->showInfo();
-
-
-  }
-
-
-
+   public function displayInfo() {
+       echo $this->info;
+       $this->showinfo();
+   }
 
 }
 
-$child=new ChildClass();
-
-$child->accessProtected();
-
-
-
+$test=new Test();
+$test->displayInfo();
 
 
 
