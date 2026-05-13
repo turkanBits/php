@@ -1,4 +1,87 @@
 <?php
+
+// Access Modifiers
+
+  // public-hem class icinde hem class colunde el catan olur.her yerde istifade edile bilir en genis giris icazesine  sahibdir
+
+
+
+
+
+  // private-yalniz classin icersinde isleye bilir
+
+
+
+
+
+  // protected-classin daxilinde isleye bilir.
+
+
+
+
+  // inheritance-irsiyyet.
+
+  class test{
+    public $name = "Jhon Doe";
+
+    public function sayHello() {
+
+      echo "Hello,my name is" . $this->name;
+
+    }
+
+
+
+
+  }
+
+  $test = new Test();
+  echo $test->name;
+  $test->sayHello()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   //  Php de konstruktor ve destruktor obyektin heyat dovrunun muxtelif merhelelerinde ise dusen xususi metodlardir.
     
 //  PHP DE OBYEKTIN HEYAT DOVRU 3 MERHELEDEN IBARETDIR.
@@ -11,29 +94,29 @@
 
 // __destruct()-parametr qebul etmir
 
-    class FileHander{
+    // class FileHander{
    
-      private $file;
+    //   private $file;
 
-      public function __construct($filename) {
+    //   public function __construct($filename) {
 
-        $this->file =fopen($filename, "w");
+    //     $this->file =fopen($filename, "w");
 
-        echo "File opened successfully:$filename\n";
+    //     echo "File opened successfully:$filename\n";
 
-      }
-
-
-      public function __destruct() {
-
-        fclose($this->file);
-        echo "File closed successfuly.\n";
-      }
+    //   }
 
 
-    }
+    //   public function __destruct() {
 
-    $fileHandler = new FileHander ("test.txt");
+    //     fclose($this->file);
+    //     echo "File closed successfuly.\n";
+    //   }
+
+
+    // }
+
+    // $fileHandler = new FileHander ("test.txt");
 
      
 
