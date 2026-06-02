@@ -1,6 +1,69 @@
 <?php
 
 
+// Traits
+
+// bir class sadece basqa bir dene classi extends ede biler.
+ 
+
+trait sayHello {
+
+  public function hello() {
+     echo "Salam dunya!";
+  }
+}
+
+
+class MyClass {
+
+  use sayHello; 
+  
+
+}
+$obj = new MyClass();
+$obj->hello();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // const
 
 // static dweyerdir
@@ -9,83 +72,56 @@
 // ::
 
 
-abstract class Shape {
+// abstract class Shape {
 
-   abstract public function area(); 
+//    abstract public function area(); 
 
-   public function describe() {
+//    public function describe() {
      
-     return "Bu bir sekil obyektidir";
+//      return "Bu bir sekil obyektidir";
      
-   }
+//    }
 
-}
-
-
-class Circle extends Shape {
-
-  private $radius;
-
-  public function __construct($radius)
-  {
-    $this->radius=$radius;
-  }
-
-  public function area() {
-    return pi() * $this->radius ** 2;
-  }
-}
-
-class Rectangle extends Shape {
-  private $width,$height;
-
-  public function __construct($width,$height) {
-    $this->width=$width;
-     $this->height=$height;
-
-  }
-
-   public function area() {
-     return $this->width * $this->height;
-   }
-}
+// }
 
 
-$circle = new Circle (5);
-$rectangle =new Rectangle (3,8);
+// class Circle extends Shape {
 
-echo "Dairenin sahesi:" .$circle->area() . "<br>";
-echo $circle->describe();
+//   private $radius;
 
-echo "Duzbucaqlinin sahesi:".$rectangle->area() ."<br>";
-echo $rectangle->describe();
+//   public function __construct($radius)
+//   {
+//     $this->radius=$radius;
+//   }
 
+//   public function area() {
+//     return pi() * $this->radius ** 2;
+//   }
+// }
 
+// class Rectangle extends Shape {
+//   private $width,$height;
 
+//   public function __construct($width,$height) {
+//     $this->width=$width;
+//      $this->height=$height;
 
+//   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//    public function area() {
+//      return $this->width * $this->height;
+//    }
+// }
 
 
+// $circle = new Circle (5);
+// $rectangle =new Rectangle (3,8);
 
+// echo "Dairenin sahesi:" .$circle->area() . "<br>";
+// echo $circle->describe();
 
-
-
+// echo "Duzbucaqlinin sahesi:".$rectangle->area() ."<br>";
+// echo $rectangle->describe();
 
 
 
