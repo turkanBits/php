@@ -1,47 +1,98 @@
 <?php
 
-interface Engine {
 
-    public function start ();
+// const
 
+// static dweyerdir
+
+
+// ::
+
+
+interface MyInterface {
+   const MESSAGE = "Bu bir interface sabitidir";
 }
 
+class MyClass implements MyInterface{
+   const MESSAGE = 200;
+}
 
-interface Fuel {
+echo MyClass::MESSAGE;
 
-  public function refuel($liters);
 
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// interface Engine {
+
+//     public function start ();
+
+// }
+
+
+// interface Fuel {
+
+//   public function refuel($liters);
+
+//   }
   
 
 
-class Car implements Engine,Fuel {
+// class Car implements Engine,Fuel {
 
-  private $fuelLevel =0;
+//   private $fuelLevel =0;
 
-   public function start() {
-      if($this->fuelLevel > 0) {
-        echo "Masin ise dusdu <br>";
-      } else {
-        echo "Yanacaq yoxdur.<br>";
-      }
+//    public function start() {
+//       if($this->fuelLevel > 0) {
+//         echo "Masin ise dusdu <br>";
+//       } else {
+//         echo "Yanacaq yoxdur.<br>";
+//       }
 
-   }
+//    }
 
-    public function refuel($liters) {
+//     public function refuel($liters) {
  
-      $this->fuelLevel += $liters;
-      echo "Yanacaq dolduruldu:$liters litr.Hazirki seviyye:$this->fuelLevel litr teskil edir.<br>";
+//       $this->fuelLevel += $liters;
+//       echo "Yanacaq dolduruldu:$liters litr.Hazirki seviyye:$this->fuelLevel litr teskil edir.<br>";
      
-    }
-}
+//     }
+// }
 
 
-$car=new Car();
+// $car=new Car();
 
-$car->start();
-$car->refuel(400);
-$car->start();
+// $car->start();
+// $car->refuel(400);
+// $car->start();
 
 
 
