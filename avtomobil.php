@@ -8,34 +8,25 @@
 
 trait TraitA {
 
+  public $name = "Trait Turkan ve Hemide";
+
   public function greet() {
-     echo "Bu Trait A-dir";
+     echo $this->name;
   }
 }
 
-
-trait TraitB {
-
-  
-
-  public function greet() {
-     echo "Bu Trait B-dir";
-  }
-  
-}
 
 
 class MyClass {
 
- use TraitA,TraitB{
-    TraitA::greet insteadOf TraitB;
-    TraitB::greet as sayHello;
- }  
+ use TraitA;
+    
+   
 
 }
 $obj = new MyClass();
 $obj->greet();
-$obj->sayHello();
+
 
 
 
