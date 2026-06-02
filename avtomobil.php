@@ -1,47 +1,43 @@
 <?php
+// polymorphism-coxsekillilik (PHP-DE DESTEKLENMIR)
 
-class A {
-  public function methodA() {
-    echo "Bu class A-dan gelir .<br>";
-  }
-
-}
-
-class B extends A {
-   public function methodB() {
-    echo "Bu class B-den gelir .<br>";
-  }
-}
+// eyni metod adinin ferqli classlarda isleye bilmesi
 
 
-class C extends B {
-   public function methodC() {
-    echo "Bu class C-den gelir .<br>";
+// 1)compile-time
+// 2)run time-irsiyyet ve overriding vasitesi ile heyata kecirilir
+
+
+// interfeysler vasitesi ile heyata kecirilir-interface
+
+
+
+class Animal {
+  public function sound () {
+    echo "Heyvan sesi cixarir.<br>";
   }
 }
 
-class D extends C {
-   public function methodD() {
-    echo "Bu class D-den gelir .<br>";
+class Dog  extends Animal {
+  public function sound () {
+    echo "it hurur hav hav.<br>";
   }
 }
 
-$d = new D ();
+class Cat extends Animal {
+  public function sound () {
+    echo "pisik miyolduyur miav miav.<br>";
+  }
+}
 
-$d->methodA();
-$d->methodB();
-$d->methodC();
-$d->methodD();
-
-
-
-
-
+$dog=new Dog ();
+$cat=new cat ();
+$animal=new Animal();
 
 
-
-
-
+$dog->sound();
+$cat->sound();
+$animal->sound();
 
 
 
@@ -53,6 +49,82 @@ $d->methodD();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// overriding-inheritance
+// polymorphism-dedikde ise interface agla gelmelidir
+
+// class A {
+//   public function methodA() {
+//     echo "Bu class A-dan gelir .<br>";
+//   }
+
+// }
+
+// class B extends A {
+//    public function methodB() {
+//     echo "Bu class B-den gelir .<br>";
+//   }
+// }
+
+
+// class C extends B {
+//    public function methodC() {
+//     echo "Bu class C-den gelir .<br>";
+//   }
+// }
+
+// class D extends C {
+//    public function methodD() {
+//     echo "Bu class D-den gelir .<br>";
+//   }
+// }
+
+// $d = new D ();
+
+// $d->methodA();
+// $d->methodB();
+// $d->methodC();
+// $d->methodD();
 // Access Modifiers ve Inheritance
 
 // class ParentClass{
@@ -86,39 +158,6 @@ $d->methodD();
 
 // $c=new ChildClass();
 // $c->showParentVars();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // inheridance-extends(acar soz)
 
@@ -165,36 +204,7 @@ $d->methodD();
   // $cat->name="Doby ";
   // $cat->eat();
   // $cat->meow();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 //  class User {
 
 //    public static $userCount=0;
