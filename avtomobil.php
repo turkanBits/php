@@ -6,31 +6,29 @@
 // bir class sadece basqa bir dene classi extends ede biler.
  
 
-trait TraitA {
+class parentClass {
+   public function sayHello() {
+    echo 'Parent Hemide';
+   }
+}
 
-  abstract public function greet();
+trait MyTrait {
+   public function sayHello() {
+    echo 'Hello from Turkan';
+   }
+}
+
+class ChildClass extends ParentClass {
+
+    use MyTrait;
 
 }
 
+$obj=new ChildClass();
+$obj->sayHello();
 
-
-class MyClass {
-
- use TraitA;
-
- public function greet() {
-  echo "miyav miyav hav hav";
- }
-    
-   
-
-}
-$obj = new MyClass();
-$obj->greet();
-
-
-
-
+$obj2=new ParentClass();
+$obj2->sayHello();
 
 
 
