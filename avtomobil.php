@@ -9,15 +9,27 @@
 // ::
 
 
-interface MyInterface {
-   const MESSAGE = "Bu bir interface sabitidir";
+interface InterfaceA {
+   const GREETING1 ="salam";
 }
 
-class MyClass implements MyInterface{
-   const MESSAGE = 200;
+
+interface InterfaceB {
+  const GREETING2 ="hello";
 }
 
-echo MyClass::MESSAGE;
+
+class MyClass implements InterfaceA,InterfaceB {
+
+  public function sayHello() {
+    echo InterfaceA::GREETING1;
+    echo InterfaceB::GREETING2;
+  }
+
+}
+
+$obj=new MyClass();
+$obj->SayHello();
 
 
 
@@ -44,9 +56,15 @@ echo MyClass::MESSAGE;
 
 
 
+// interface MyInterface {
+//    const MESSAGE = "Bu bir interface sabitidir";
+// }
 
+// class MyClass implements MyInterface{
+//   //  const MESSAGE = 200;
+// }
 
-
+// echo MyClass::MESSAGE;
 
 
 
