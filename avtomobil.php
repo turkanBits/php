@@ -8,11 +8,8 @@
 
 trait TraitA {
 
-  public $name = "Trait Turkan ve Hemide";
+  abstract public function greet();
 
-  public function greet() {
-     echo $this->name;
-  }
 }
 
 
@@ -20,6 +17,10 @@ trait TraitA {
 class MyClass {
 
  use TraitA;
+
+ public function greet() {
+  echo "miyav miyav hav hav";
+ }
     
    
 
