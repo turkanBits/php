@@ -18,24 +18,19 @@
 
 // Nullable types ?
 
-class User {
-  public $name;
+class MyClass {
 
-  public function __construct(string $name){
-    $this->name=$name;
+  public function createInstance():self{
+
+    return new self();
   }
 }
 
+$myClass = new MyClass();
 
-function printUser( User $user) : string {
+$newObject=$myClass->createInstance();
 
-  return "Istifadeci:" . $user->name;
-}
-
-
-$user=new User ("John");
-
-echo printUser( $user );
+var_dump($newObject);
 
 
 
@@ -51,6 +46,27 @@ echo printUser( $user );
 
 
 
+
+
+
+// class User {
+//   public $name;
+
+//   public function __construct(string $name){
+//     $this->name=$name;
+//   }
+// }
+
+
+// function printUser( User $user) : string {
+
+//   return "Istifadeci:" . $user->name;
+// }
+
+
+// $user=new User ("John");
+
+// echo printUser( $user );
 
 
 // function multiply(array $a)  :int   {
