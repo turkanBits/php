@@ -18,14 +18,14 @@
 
 // Nullable types ?
 
-function multiply(?string $a)  :string    {
+function multiply(array $a)  :int   {
 
-     return $a;
+     return array_sum ($a);
    
 }
 
-echo multiply("resad");
-echo multiply(null);
+echo multiply(1,2,3);
+
 
 
 
