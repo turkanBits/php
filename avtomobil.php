@@ -1,5 +1,71 @@
 <?php
 
+// magic method 
+
+// __construct()
+//__destruct()
+
+//__get()
+//__set()
+
+//__call()
+
+//__toString()
+
+// __invoke()
+
+// __clone()
+
+
+class MyClass {
+
+   public function __toString() {
+     return "Bu obyekt string olaraq istifade edilir";
+
+   }
+   
+}
+
+$obj= new MyClass();
+echo $obj;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // final
 
 // class MyClass {
@@ -16,47 +82,11 @@
   
 // }
 
-class ParentClass {
-   public function greet() {
-     echo "Salam";
-   }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// class ParentClass {
+//    public function greet() {
+//      echo "Salam";
+//    }
+// }
 
 
 
