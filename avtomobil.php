@@ -1,31 +1,26 @@
 <?php
 
-// Encapsulation
+// final
+
+// class MyClass {
 
 
- class User {
+//    public function sayHello() {
+//       echo "Salam bu MyClass-dir";
+//    } 
 
-    //  gizli melumat (private property)
+// }
 
-    private $name;
 
-    public function setName($name){
-        if (strlen($name)>2) {
-           $this->name=$name;
-        } else {
-           echo "Ad en azi 3 simvol olmalidir!<br>";
-        }
-    }
+// class ChildClass extends MyClass {
+  
+// }
 
-    public function getName() {
-       return $this->name;
-    }
-
- }
-
- $user=new User();
- $user->setName("ali");
- echo $user->getName();
+class ParentClass {
+   public function greet() {
+     echo "Salam";
+   }
+}
 
 
 
@@ -63,6 +58,31 @@
 
 
 
+
+
+//  class User {
+
+//     //  gizli melumat (private property)
+
+//     private $name;
+
+//     public function setName($name){
+//         if (strlen($name)>2) {
+//            $this->name=$name;
+//         } else {
+//            echo "Ad en azi 3 simvol olmalidir!<br>";
+//         }
+//     }
+
+//     public function getName() {
+//        return $this->name;
+//     }
+
+//  }
+
+//  $user=new User();
+//  $user->setName("ali");
+//  echo $user->getName();
 
 
 
