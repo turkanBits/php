@@ -19,15 +19,15 @@
 
 class MyClass {
 
-   public function __toString() {
-     return "Bu obyekt string olaraq istifade edilir";
+   public function __invoke($param) {
+     echo "'$param'obyekit bir funskiya kimi cagirilanda avtomatik cagirilan metoda __invoake magic metodu deyilir";
 
    }
    
 }
 
 $obj= new MyClass();
-echo $obj;
+$obj('Test');
 
 
 
