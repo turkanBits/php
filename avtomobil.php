@@ -19,15 +19,24 @@
 
 class MyClass {
 
-   public function __invoke($param) {
-     echo "'$param'obyekit bir funskiya kimi cagirilanda avtomatik cagirilan metoda __invoake magic metodu deyilir";
+  public $name;
+
+  public function __construct($name)
+  {
+    $this->name=$name;
+  }
+
+   public function __clone() {
+   
+    $this->name="Klonlanmis" .$this->name;
 
    }
    
 }
 
-$obj= new MyClass();
-$obj('Test');
+$obj1= new MyClass('Turkan');
+ 
+echo $obj1->name .'<br>';
 
 
 
