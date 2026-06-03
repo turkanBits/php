@@ -1,5 +1,62 @@
 <?php
 
+// type hinting and return type
+
+// int
+// float
+// string
+// bool
+// array
+// object
+// callable
+// iterable
+// void
+// self
+// class adlari
+
+
+
+// Nullable types ?
+
+function multiply(string $a)  :string    {
+
+     return $a;
+   
+}
+
+echo multiply("resad");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Static self
+
+// class MyClass {
+//   // public static $counter =0;
+
+//   public static function incrementCounter($a,$b) {
+//    return $a+$b;
+//   }
+// }
+
+
+// echo MyClass::incrementCounter(5,10);
+
 // magic method 
 
 // __construct()
@@ -17,62 +74,26 @@
 // __clone()
 
 
-class MyClass {
+// class MyClass {
 
-  public $name;
+//   public $name;
 
-  public function __construct($name)
-  {
-    $this->name=$name;
-  }
+//   public function __construct($name)
+//   {
+//     $this->name=$name;
+//   }
 
-   public function __clone() {
+//    public function __clone() {
    
-    $this->name="Klonlanmis" .$this->name;
+//     $this->name="Klonlanmis" .$this->name;
 
-   }
+//    }
    
-}
+// }
 
-$obj1= new MyClass('Turkan');
+// $obj1= new MyClass('Turkan');
  
-echo $obj1->name .'<br>';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// echo $obj1->name .'<br>';
 
 
 // final
