@@ -18,13 +18,14 @@
 
 // Nullable types ?
 
-function multiply(string $a)  :string    {
+function multiply(?string $a)  :string    {
 
      return $a;
    
 }
 
 echo multiply("resad");
+echo multiply(null);
 
 
 
