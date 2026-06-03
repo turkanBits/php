@@ -18,13 +18,24 @@
 
 // Nullable types ?
 
-function multiply(array $a)  :int   {
+class User {
+  public $name;
 
-     return array_sum ($a);
-   
+  public function __construct(string $name){
+    $this->name=$name;
+  }
 }
 
-echo multiply(1,2,3);
+
+function printUser( User $user) : string {
+
+  return "Istifadeci:" . $user->name;
+}
+
+
+$user=new User ("John");
+
+echo printUser( $user );
 
 
 
@@ -42,8 +53,13 @@ echo multiply(1,2,3);
 
 
 
+// function multiply(array $a)  :int   {
 
+//      return array_sum ($a);
+   
+// }
 
+// echo multiply(1,2,3);
 
 // Static self
 
