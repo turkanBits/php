@@ -1,6 +1,6 @@
 <?php
 
-namespace App\clasess;
+namespace App\Clasess;
 
 class User{
     public function greet()

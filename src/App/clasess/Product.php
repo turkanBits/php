@@ -1,10 +1,10 @@
 <?php
 
-namespace App\clasess;
+namespace App\Clasess;
 
 class Product 
 {
-    public function info()
+    public function greet()
     {
          return "Men product sinifiyem.";
     }
