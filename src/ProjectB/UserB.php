@@ -2,14 +2,13 @@
 
 namespace ProjectB;
 
-use ProjectA\User;
 
-class UserB
+
+class User
 {
      public function greet()
      {
-        $userA=new User();
-          return $userA->greet();
+         return "Muellimin bizden yaxsi basqa telebeleri var.Allah bizi kondelen qoysun.";
      }
 
 }
