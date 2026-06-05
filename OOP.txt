@@ -1,5 +1,0 @@
-OOP Object Oriented Programming
-
-OPP de variableler ve funksiyalar obyektler seklinde teskil edilir.
-
-Class (sinif)

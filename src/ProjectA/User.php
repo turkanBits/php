@@ -1,22 +1,18 @@
 <?php
 
-// const in class 
+// namespace ve use nedir? - eyni adli classlarin,funskiyalarin ve constlarin bir birine qarismasinin qarsisini almaqda istifade olunan acar sozdur.
 
-class Avtomobil 
+namespace ProjectA;
+
+class User
 {
-  const MAX_SPEED=200;
-  const MIN_SPEED=0;
-
-  public function getMaxSpeed()
-  {
-      return self::MAX_SPEED;
-  }
-
+     public function greet()
+     {
+          return "Hello from projectA.";
+     }
 }
 
 
-$car = new Avtomobil();
-echo $car->getMaxSpeed(); 
 
 
 
@@ -37,35 +33,23 @@ echo $car->getMaxSpeed();
 
 
 
+// const in class 
+
+// class Avtomobil 
+// {
+//   const MAX_SPEED=200;
+//   const MIN_SPEED=0;
+
+//   public function getMaxSpeed()
+//   {
+//       return self::MAX_SPEED;
+//   }
+
+// }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// $car = new Avtomobil();
+// echo $car->getMaxSpeed(); 
 
 
 
