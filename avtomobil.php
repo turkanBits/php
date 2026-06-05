@@ -1,5 +1,75 @@
 <?php
 
+// const in class 
+
+class Avtomobil 
+{
+  const MAX_SPEED=200;
+  const MIN_SPEED=0;
+
+  public function getMaxSpeed()
+  {
+      return self::MAX_SPEED;
+  }
+
+}
+
+
+$car = new Avtomobil();
+echo $car->getMaxSpeed(); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // type hinting and return type
 
 // int
@@ -18,19 +88,19 @@
 
 // Nullable types ?
 
-class MyClass {
+// class MyClass {
 
-  public function createInstance():self{
+//   public function createInstance():self{
 
-    return new self();
-  }
-}
+//     return new self();
+//   }
+// }
 
-$myClass = new MyClass();
+// $myClass = new MyClass();
 
-$newObject=$myClass->createInstance();
+// $newObject=$myClass->createInstance();
 
-var_dump($newObject);
+// var_dump($newObject);
 
 
 
