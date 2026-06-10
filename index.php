@@ -1,25 +1,17 @@
 <?php
 
+interface Greetable {
+    public function greet();
+}
 
-
-$yeniKlass =new class("Merhaba nasilsiniz") {
-
-    public $name;
-
-    public function __construct($deyer)
-    {
-        $this->name=$deyer;
+$object =new class implements Greetable {
+    public function greet() {
+        return "Hello,World" ;
     }
-
-    public function getName() 
-    {
-        return $this->name;
-    }
-    
 };
 
 
-echo $yeniKlass->getName();
+echo $object->greet();
 
 
 
@@ -32,14 +24,24 @@ echo $yeniKlass->getName();
 
 
 
+// $yeniKlass =new class("Merhaba nasilsiniz") {
+
+//     public $name;
+
+//     public function __construct($deyer)
+//     {
+//         $this->name=$deyer;
+//     }
+
+//     public function getName() 
+//     {
+//         return $this->name;
+//     }
+    
+// };
 
 
-
-
-
-
-
-
+// echo $yeniKlass->getName();
 
 // use MyApp\Game\Player\Player;
 
