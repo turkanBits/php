@@ -2,8 +2,14 @@
 
 
 
-$yeniKlass =new class {
-    public $name = 'Anonim klasslar bu cur yaradilir';
+$yeniKlass =new class("Merhaba nasilsiniz") {
+
+    public $name;
+
+    public function __construct($deyer)
+    {
+        $this->name=$deyer;
+    }
 
     public function getName() 
     {
