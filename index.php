@@ -1,12 +1,46 @@
 <?php
 
 
-use MyApp\Game\Player\Player;
+
+$yeniKlass =new class {
+    public $name = 'Anonim klasslar bu cur yaradilir';
+
+    public function getName() 
+    {
+        return $this->name;
+    }
+    
+};
 
 
-require_once realpath ('vendor/autoload.php');
+echo $yeniKlass->getName();
 
 
-$player = new Player();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// use MyApp\Game\Player\Player;
+
+
+// require_once realpath ('vendor/autoload.php');
+
+
+// $player = new Player();
 
 // $gameController =new \MyApp\Game\GameController();
