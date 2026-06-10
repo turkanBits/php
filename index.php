@@ -4,23 +4,24 @@
 
 
 
-class Turkan {
-    public $name='Merhaba';
-}
+// class Turkan {
+//     public $name='Merhaba';
+// }
 
-$turkan = new Turkan();
+// $turkan = new Turkan();
 
-echo $turkan->name;
-
-
-//  $object1=new stdClass();
-//  $object1->name="John";
+// echo $turkan->name;
 
 
+ $object1=new stdClass();
+ $object1->name="John";
 
 
+$object2=$object1;
+$object2->name="Doe";
 
-
+echo $object1->name;
+echo $object2->name;
 
 
 
