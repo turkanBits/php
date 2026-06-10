@@ -1,12 +1,14 @@
 <?php
 
-interface Greetable {
-    public function greet();
+class Greetable {
+    public function greet() {
+        return "Hello!";
+    }
 }
 
-$object =new class implements Greetable {
+$object =new class extends Greetable {
     public function greet() {
-        return "Hello,World" ;
+        return parent::greet() ;
     }
 };
 
