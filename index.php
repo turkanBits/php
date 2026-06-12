@@ -33,9 +33,16 @@ class ProductManager{
     public function saveProducts(array $products) {
         $jsonData=json_encode($products,JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
-        echo "<pre>";
-        print_r($jsonData);
-           echo "</pre>";
+        // echo "<pre>";
+        // print_r($jsonData);
+        //    echo "</pre>";
+
+        if (json_last_error()===JSON_ERROR_NONE) {
+            file_put_contents($this->filePath,$jsonData);
+            echo "Mehsullar ugurla saxlanildi\n";
+        }else{
+            echo "JSON xeta :" .json_last_error_msg() . "\n";
+        }
     }
 }
 
