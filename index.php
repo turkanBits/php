@@ -37,17 +37,29 @@ class FileManager {
     public function writeToFile($content)
     {
         if (file_put_contents($this->filePath,$content)) {
-            return "File written successfully.";
+            return "File written successfully." ."<br>";
         }else {
-            return "Error writing to file.";
+            return "Error writing to file." ."<br>";
         }
     }
+
+     public function readFromFile()
+    {
+        if (file_exists($this->filePath)) {
+            return file_get_contents($this->filePath) ."<br>";
+        }else {
+            return "File does not exist." ."<br>";
+        }
+    }
+
+
 }
 
 
 $fileManager =new FileManager ('example.txt');
 
 echo $fileManager->writeToFile('Hello,World');
+echo $fileManager->readFromFile();
 
 
 
