@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,45 +9,14 @@
 </head>
 <body>
     
-    <?php require_once "header.php"; ?>
+ 
 
      
       <p>Welcome to my website!</p>
 
   
 </body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</html> -->
 
 
 
@@ -53,10 +24,30 @@
 
 
 
+class FileManager {
+    private $filePath;
 
 
+    public function __construct($filePath)
+    {
+        $this->filePath=$filePath;
+
+    }
+
+    public function writeToFile($content)
+    {
+        if (file_put_contents($this->filePath,$content)) {
+            return "File written successfully.";
+        }else {
+            return "Error writing to file.";
+        }
+    }
+}
 
 
+$fileManager =new FileManager ('example.txt');
+
+echo $fileManager->writeToFile('Hello,World');
 
 
 

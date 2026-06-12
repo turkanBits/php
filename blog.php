@@ -7,7 +7,7 @@
 </head>
 <body>
     
-    <?php require_once "header.php"; ?>
+   
 
      
       <p>Welcome to my website!</p>
