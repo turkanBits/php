@@ -52,6 +52,14 @@ class FileManager {
         }
     }
 
+    public function deleteFile() {
+        if(file_exists($this->filePath)) {
+            unlink ($this->filePath);
+            return "File deleted";
+        } else {
+            return "File does not exist." . "<br>";
+        }
+    }
 
 }
 
@@ -61,6 +69,8 @@ $fileManager =new FileManager ('example.txt');
 echo $fileManager->writeToFile('Hello,World');
 echo $fileManager->readFromFile();
 
+
+echo $fileManager->deleteFile();
 
 
 
