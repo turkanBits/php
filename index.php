@@ -1,47 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <?php require_once "header.php"; ?>
+
+     
+      <p>Welcome to my website!</p>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <?php
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Deep copy 
 
-class Product {
-    public $name;
-    public $details;
+// class Product {
+//     public $name;
+//     public $details;
 
-    public function __clone() {
-        $this->details=clone $this->details;
+//     public function __clone() {
+//         $this->details=clone $this->details;
 
-    }
-}
-
-
-$details=new stdClass();
-$details->description = "A high-end laptop";
-
-$product1=new Product();
-$product1->name="Laptop";
-$product1->details=$details;
+//     }
+// }
 
 
-$product2=clone $product1;
-$product2->details="A cloned product"; 
+// $details=new stdClass();
+// $details->description = "A high-end laptop";
+
+// $product1=new Product();
+// $product1->name="Laptop";
+// $product1->details=$details;
 
 
-echo $product1->details->description . "<br>";
+// $product2=clone $product1;
+// $product2->details="A cloned product"; 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// echo $product1->details->description . "<br>";
 
 
 
