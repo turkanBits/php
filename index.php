@@ -22,55 +22,104 @@
 
 <?php
 
-
-
-class FileManager {
+class ProductManager{
     private $filePath;
-
 
     public function __construct($filePath)
     {
-        $this->filePath=$filePath;
-
+        $this->filePath =$filePath;
     }
 
-    public function writeToFile($content)
-    {
-        if (file_put_contents($this->filePath,$content)) {
-            return "File written successfully." ."<br>";
-        }else {
-            return "Error writing to file." ."<br>";
-        }
-    }
+    public function saveProducts(array $products) {
+        $jsonData=json_encode($products,JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
-     public function readFromFile()
-    {
-        if (file_exists($this->filePath)) {
-            return file_get_contents($this->filePath) ."<br>";
-        }else {
-            return "File does not exist." ."<br>";
-        }
+        echo "<pre>";
+        print_r($jsonData);
+           echo "</pre>";
     }
-
-    public function deleteFile() {
-        if(file_exists($this->filePath)) {
-            unlink ($this->filePath);
-            return "File deleted";
-        } else {
-            return "File does not exist." . "<br>";
-        }
-    }
-
 }
 
+$productManager = new ProductManager('products.json');
 
-$fileManager =new FileManager ('example.txt');
+$products = [
+    [
+        'id'=>1,
+        'name'=>'Telefon',
+        'price'=>1000,
+        'stock'=>50
 
-echo $fileManager->writeToFile('Hello,World');
-echo $fileManager->readFromFile();
+    ],
+
+    [
+        'id'=>2,
+        'name'=>'Laptop',
+        'price'=>2000,
+        'stock'=>20
+    ]
+];
+
+$productManager->saveProducts($products);
 
 
-echo $fileManager->deleteFile();
+
+
+
+
+
+
+
+
+
+
+
+
+// class FileManager {
+//     private $filePath;
+
+
+//     public function __construct($filePath)
+//     {
+//         $this->filePath=$filePath;
+
+//     }
+
+//     public function writeToFile($content)
+//     {
+//         if (file_put_contents($this->filePath,$content)) {
+//             return "File written successfully." ."<br>";
+//         }else {
+//             return "Error writing to file." ."<br>";
+//         }
+//     }
+
+//      public function readFromFile()
+//     {
+//         if (file_exists($this->filePath)) {
+//             return file_get_contents($this->filePath) ."<br>";
+//         }else {
+//             return "File does not exist." ."<br>";
+//         }
+//     }
+
+//     public function deleteFile() {
+//         if(file_exists($this->filePath)) {
+//             unlink ($this->filePath);
+//             return "File deleted";
+//         } else {
+//             return "File does not exist." . "<br>";
+//         }
+//     }
+
+// }
+
+
+// $fileManager =new FileManager ('example.txt');
+
+// echo $fileManager->writeToFile('Hello,World');
+// echo $fileManager->readFromFile();
+
+
+// echo $fileManager->deleteFile();
 
 
 
