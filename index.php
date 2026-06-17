@@ -13,7 +13,7 @@ class ApiResponse
     public function addheader(string $key,string $value) {
       $this->headers="$key:$value";
       
-      print_r($this->headers);
+      var_dump($this->headers);
     }
 }
 
