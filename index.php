@@ -13,15 +13,30 @@ class ApiResponse
     public function addHeader(string $key,string $value) {
       $this->headers[]="$key:$value";
 
-      echo "<pre>";
-      print_r($this->headers);
-      echo "</pre>";
+      // echo "<pre>";
+      // print_r($this->headers);
+      // echo "</pre>";
 
-      
+    }
+
+    public function setData(array $data) {
+      $this->data=$data;
+    }
+
+    public function send() {
+
+        http_response_code($this->statusCode);
+
+        foreach ($this->headers as $header) {
+          echo "<pre>";
+            print_r($header);
+          echo "</pre>";  
+        }
+
     }
 }
 
-
+ 
 $response =new ApiResponse();
 
 $response->addHeader('Content-Type','application/json');
@@ -29,4 +44,27 @@ $response->addHeader('Cache-Control','no-cache');
 
 
 
-// HTTP HEADER
+$data=[
+  'succes'=>true,
+  'message'=>'Melumat ugurla elde edildi',
+  'data'=> [
+    [
+          "id"=> 1,
+          "name"=> "Telefon",
+          "price"=> 1000,
+          "stock"=> 50
+    ],
+    [
+          "id"=> 2,
+          "name"=> "Laptop",
+          "price"=> 2000,
+          "stock"=> 20
+    ]
+
+]
+
+    ];
+
+    $response->setData($data);
+
+    $response->send();
