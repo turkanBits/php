@@ -11,7 +11,7 @@ class ApiResponse
     }
 
     public function addheader(string $key,string $value) {
-      $this->headers[]="$key:$value";
+      $this->headers="$key:$value";
       
       print_r($this->headers);
     }
