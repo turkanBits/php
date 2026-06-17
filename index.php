@@ -44,6 +44,23 @@ class ProductManager{
             echo "JSON xeta :" .json_last_error_msg() . "\n";
         }
     }
+
+    public function loadProducts() {
+        if (!file_exists($this->filePath)) {
+            echo "Fayl movcud deyil";
+            return [];
+        }
+
+        $jsonData=file_get_contents($this->filePath);
+        $products=json_decode($jsonData,true);
+
+        if(json_last_error()==JSON_ERROR_NONE) {
+            return $products;
+        } else {
+            echo "Json xeta mesaji:" . json_last_error() . "\n";
+            return[];
+        }
+    }
 }
 
 $productManager = new ProductManager('products.json');
@@ -67,7 +84,11 @@ $products = [
 
 $productManager->saveProducts($products);
 
+$loadedProducts =$productManager->loadProducts();
 
+echo "<pre>";
+    print_r($loadedProducts);
+echo "</pre>";           
 
 
 
