@@ -10,16 +10,23 @@ class ApiResponse
         $this->statusCode=$statusCode;
     }
 
-    public function addheader(string $key,string $value) {
-      $this->headers="$key:$value";
+    public function addHeader(string $key,string $value) {
+      $this->headers[]="$key:$value";
+
+      echo "<pre>";
+      print_r($this->headers);
+      echo "</pre>";
+
       
-      var_dump($this->headers);
     }
 }
 
 
 $response =new ApiResponse();
 
-$response->addHeader('turkan','hemide');
+$response->addHeader('Content-Type','application/json');
+$response->addHeader('Cache-Control','no-cache');
 
 
+
+// HTTP HEADER
