@@ -87,7 +87,7 @@ $productManager->saveProducts($products);
 $loadedProducts =$productManager->loadProducts();
 
 echo "<pre>";
-    print_r($loadedProducts);
+    print_r($loadedProducts[1]['name']);
 echo "</pre>";           
 
 
