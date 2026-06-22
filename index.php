@@ -14,15 +14,29 @@ class MenuManager
 
       $this->dom=new DOMDocument();
       $this->dom->load($filePath);
-      $this->menu=$this->dom->getElementsBYTagName("menu");
-
-     echo "<pre>";
-          print_r($this->menu->item(0)  );
-      echo "</pre>";     
+      $this->menu=$this->dom->getElementsBYTagName("menu")->item(0);
+ 
+    //  echo "<pre>";
+    //       print_r($this->menu->item(0)  );
+    //   echo "</pre>";     
 
    }
 
    public function addDish($name,$price) {
+
+      $dish=$this->dom->createElement("dish");
+
+      $nameElement=$this->dom->createElement("name",$name);
+      $priceElement=$this->dom->createElement("price",$price);
+
+      $dish->appendChild($nameElement);
+      $dish->appendChild($priceElement);
+
+      $this->menu->appendChild($dish);
+
+      $this->dom->save("menu.xml");
+
+     
 
    }
 
