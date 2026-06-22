@@ -16,7 +16,9 @@ class MenuManager
       $this->dom->load($filePath);
       $this->menu=$this->dom->getElementsBYTagName("menu");
 
-      print_r($this->menu->item(0));
+     echo "<pre>";
+          print_r($this->menu->item(0)  );
+      echo "</pre>";     
 
    }
 
