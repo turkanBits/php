@@ -44,6 +44,9 @@ class MenuManager
 
 $menuManager=new MenuManager("menu.xml");
 $menuManager->addDish("Burger","8.99");
+$menuManager->addDish("Pizza","1.99");
+$menuManager->addDish("Doner","3.99");
+$menuManager->addDish("lahmacun","2.99");
 
 
 // echo "Yeni yemek menyusu elave edilir";
