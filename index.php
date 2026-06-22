@@ -52,27 +52,50 @@
 
 // echo round (2.1,0, PHP_ROUND_HALF_UP);
 
-class Invoice 
-{
-    private $subtotal;
-    private $taxRate;
+// class Invoice 
+// {
+//     private $subtotal;
+//     private $taxRate;
 
-    public function __construct($subtotal,$taxRate)
+//     public function __construct($subtotal,$taxRate)
+//     {
+//         $this->subtotal =$subtotal;
+//         $this->taxRate =$taxRate;
+//     }
+
+//     public function calculateTotal():float
+//     {
+//         $tax=$this->subtotal*$this->taxRate;
+
+//         $total=$this->subtotal + $tax;
+
+//         return round($total,0);
+//     }
+// }
+
+// $invoice=new Invoice(12312.22,0.18);
+
+// echo "Musterinin umumi borcu " .$invoice->calculateTotal(). "AZN";
+
+
+class TimeHelper
+{
+    private $timezone;
+
+
+
+    public function __construct($timezone='UTC') 
     {
-        $this->subtotal =$subtotal;
-        $this->taxRate =$taxRate;
+        $this->timezone=new DateTimeZone($timezone);
     }
 
-    public function calculateTotal():float
+    public function getCurrentTime()
     {
-        $tax=$this->subtotal*$this->taxRate;
-
-        $total=$this->subtotal + $tax;
-
-        return round($total,0);
+        $datetime=new DateTime('now' ,$this->timezone);
+        return $datetime->format('Y-m-d H:i:s');
     }
 }
 
-$invoice=new Invoice(12312.22,0.18);
+$timeHelper=new TimeHelper ('Asia/Baku');
 
-echo "Musterinin umumi borcu " .$invoice->calculateTotal(). "AZN";
+echo "Hazirki vaxt (Baki):" .$timeHelper->getCurrentTime() ."<br>";
