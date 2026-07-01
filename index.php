@@ -31,8 +31,8 @@ $apiClient = new ApiClient('https://v6.exchangerate-api.com/v6/351b53f51aec151c3
 
 $data=$apiClient->get("USD");
 
-echo "<pre>";
-print_r($data->conversion_rates->AZN);
-echo "</pre>";
+// echo "<pre>";
+// print_r($data->conversion_rates->AZN);
+// echo "</pre>";
 
-// echo "1 USD - > EUR " .$data ['conversion_rates']['EUR'] . "<br>";
+echo "1 USD - > EUR " .$data->conversion_rates->AZN . "<br>";
