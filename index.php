@@ -1,101 +1,24 @@
-<!-- casting(tip cevirme) -->
-
 <?php
 
 
 
-//    (int)
+$url = "https://api.example.com/protected-data";
 
+$token = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMjM0NSIsImV4cCI6MTc4MjkzNTc2MH0.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
 
-// $kesirEded=4.9;
-// $tamEded=(int) $kesirEded;
+$ch = curl_init();
 
-// echo $tamEded;
+curl_setopt($ch, CURLOPT_URL,                   $url     );
+curl_setopt($ch, CURLOPT_RETURNTRANSFER,        true     );
+curl_setopt($ch, CURLOPT_HTTPHEADER,             [
 
-// (int) ve intval()
-// (float) ve floatval ()
-// (bool) ve boolval ()
-// (string) ve strval () 
-// (array)
+        "Autohorization : $token",
+        "Content-Type:application/json"
 
-// function topla (int $a) {
+    ]);
 
-// }
+$response = curl_exec($ch);
 
+$data = json_decode($response, true);
 
-
-
-// $num=24;
-
-// $f=(float) ($num / 2) - (int) ($num / 2);
-
-// if ($f) {
-//     echo "Number is odd";
-// } else {
-//     echo "Number is even";
-// }
-
-
-// round()-yuvarlaqlasdirma
-// ceil()-yuxari yuvarlaqlasdirma
-// floar()-asagi yuvarlaqlasdirir
-// intdiv()-nadiren istifade olunur tam bolunme emeliyyatini heyata keciri ve neticeni tam eded kimi qaytarir
-// number_format()-ededi mueyyen edilmis format ile yuvarlaqlasdirir.
-
-// bcadd(), bcsub(),bcmul() ,bcmod(),bcsqr()
-
-// PHP_ROUND_HALF_UP
-// PHP_ROUND_HALF_DOWN
-// PHP_ROUND_HALF_EVEN
-// PHP_ROUND_HALF_ODD
-
-
-// echo round (2.1,0, PHP_ROUND_HALF_UP);
-
-// class Invoice 
-// {
-//     private $subtotal;
-//     private $taxRate;
-
-//     public function __construct($subtotal,$taxRate)
-//     {
-//         $this->subtotal =$subtotal;
-//         $this->taxRate =$taxRate;
-//     }
-
-//     public function calculateTotal():float
-//     {
-//         $tax=$this->subtotal*$this->taxRate;
-
-//         $total=$this->subtotal + $tax;
-
-//         return round($total,0);
-//     }
-// }
-
-// $invoice=new Invoice(12312.22,0.18);
-
-// echo "Musterinin umumi borcu " .$invoice->calculateTotal(). "AZN";
-
-
-class TimeHelper
-{
-    private $timezone;
-
-
-
-    public function __construct($timezone='UTC') 
-    {
-        $this->timezone=new DateTimeZone($timezone);
-    }
-
-    public function getCurrentTime()
-    {
-        $datetime=new DateTime('now' ,$this->timezone);
-        return $datetime->format('Y-m-d H:i:s');
-    }
-}
-
-$timeHelper=new TimeHelper ('Asia/Baku');
-
-echo "Hazirki vaxt (Baki):" .$timeHelper->getCurrentTime() ."<br>";
+curl_close($ch);

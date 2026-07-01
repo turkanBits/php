@@ -1,298 +1,101 @@
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
- 
-
-     
-      <p>Welcome to my website!</p>
-
-  
-</body>
-</html> -->
-
-
+<!-- casting(tip cevirme) -->
 
 <?php
 
-class ProductManager{
-    private $filePath;
 
-    public function __construct($filePath)
+
+//    (int)
+
+
+// $kesirEded=4.9;
+// $tamEded=(int) $kesirEded;
+
+// echo $tamEded;
+
+// (int) ve intval()
+// (float) ve floatval ()
+// (bool) ve boolval ()
+// (string) ve strval () 
+// (array)
+
+// function topla (int $a) {
+
+// }
+
+
+
+
+// $num=24;
+
+// $f=(float) ($num / 2) - (int) ($num / 2);
+
+// if ($f) {
+//     echo "Number is odd";
+// } else {
+//     echo "Number is even";
+// }
+
+
+// round()-yuvarlaqlasdirma
+// ceil()-yuxari yuvarlaqlasdirma
+// floar()-asagi yuvarlaqlasdirir
+// intdiv()-nadiren istifade olunur tam bolunme emeliyyatini heyata keciri ve neticeni tam eded kimi qaytarir
+// number_format()-ededi mueyyen edilmis format ile yuvarlaqlasdirir.
+
+// bcadd(), bcsub(),bcmul() ,bcmod(),bcsqr()
+
+// PHP_ROUND_HALF_UP
+// PHP_ROUND_HALF_DOWN
+// PHP_ROUND_HALF_EVEN
+// PHP_ROUND_HALF_ODD
+
+
+// echo round (2.1,0, PHP_ROUND_HALF_UP);
+
+// class Invoice 
+// {
+//     private $subtotal;
+//     private $taxRate;
+
+//     public function __construct($subtotal,$taxRate)
+//     {
+//         $this->subtotal =$subtotal;
+//         $this->taxRate =$taxRate;
+//     }
+
+//     public function calculateTotal():float
+//     {
+//         $tax=$this->subtotal*$this->taxRate;
+
+//         $total=$this->subtotal + $tax;
+
+//         return round($total,0);
+//     }
+// }
+
+// $invoice=new Invoice(12312.22,0.18);
+
+// echo "Musterinin umumi borcu " .$invoice->calculateTotal(). "AZN";
+
+
+class TimeHelper
+{
+    private $timezone;
+
+
+
+    public function __construct($timezone='UTC') 
     {
-        $this->filePath =$filePath;
+        $this->timezone=new DateTimeZone($timezone);
     }
 
-    public function saveProducts(array $products) {
-        $jsonData=json_encode($products,JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
-
-        // echo "<pre>";
-        // print_r($jsonData);
-        //    echo "</pre>";
-
-        if (json_last_error()===JSON_ERROR_NONE) {
-            file_put_contents($this->filePath,$jsonData);
-            echo "Mehsullar ugurla saxlanildi\n";
-        }else{
-            echo "JSON xeta :" .json_last_error_msg() . "\n";
-        }
-    }
-
-    public function loadProducts() {
-        if (!file_exists($this->filePath)) {
-            echo "Fayl movcud deyil";
-            return [];
-        }
-
-        $jsonData=file_get_contents($this->filePath);
-        $products=json_decode($jsonData,true);
-
-        if(json_last_error()==JSON_ERROR_NONE) {
-            return $products;
-        } else {
-            echo "Json xeta mesaji:" . json_last_error() . "\n";
-            return[];
-        }
+    public function getCurrentTime()
+    {
+        $datetime=new DateTime('now' ,$this->timezone);
+        return $datetime->format('Y-m-d H:i:s');
     }
 }
 
-$productManager = new ProductManager('products.json');
+$timeHelper=new TimeHelper ('Asia/Baku');
 
-$products = [
-    [
-        'id'=>1,
-        'name'=>'Telefon',
-        'price'=>1000,
-        'stock'=>50
-
-    ],
-
-    [
-        'id'=>2,
-        'name'=>'Laptop',
-        'price'=>2000,
-        'stock'=>20
-    ]
-];
-
-$productManager->saveProducts($products);
-
-$loadedProducts =$productManager->loadProducts();
-
-echo "<pre>";
-    print_r($loadedProducts[1]['name']);
-echo "</pre>";           
-
-
-
-
-
-
-
-
-
-
-
-
-// class FileManager {
-//     private $filePath;
-
-
-//     public function __construct($filePath)
-//     {
-//         $this->filePath=$filePath;
-
-//     }
-
-//     public function writeToFile($content)
-//     {
-//         if (file_put_contents($this->filePath,$content)) {
-//             return "File written successfully." ."<br>";
-//         }else {
-//             return "Error writing to file." ."<br>";
-//         }
-//     }
-
-//      public function readFromFile()
-//     {
-//         if (file_exists($this->filePath)) {
-//             return file_get_contents($this->filePath) ."<br>";
-//         }else {
-//             return "File does not exist." ."<br>";
-//         }
-//     }
-
-//     public function deleteFile() {
-//         if(file_exists($this->filePath)) {
-//             unlink ($this->filePath);
-//             return "File deleted";
-//         } else {
-//             return "File does not exist." . "<br>";
-//         }
-//     }
-
-// }
-
-
-// $fileManager =new FileManager ('example.txt');
-
-// echo $fileManager->writeToFile('Hello,World');
-// echo $fileManager->readFromFile();
-
-
-// echo $fileManager->deleteFile();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Deep copy 
-
-// class Product {
-//     public $name;
-//     public $details;
-
-//     public function __clone() {
-//         $this->details=clone $this->details;
-
-//     }
-// }
-
-
-// $details=new stdClass();
-// $details->description = "A high-end laptop";
-
-// $product1=new Product();
-// $product1->name="Laptop";
-// $product1->details=$details;
-
-
-// $product2=clone $product1;
-// $product2->details="A cloned product"; 
-
-
-// echo $product1->details->description . "<br>";
-
-
-
-
-
-
-// cloning and copy
-
-
-
-// class Turkan {
-//     public $name='Merhaba';
-// }
-
-// $turkan = new Turkan();
-
-// echo $turkan->name;
-
-
-//  $object1=new stdClass();
-//  $object1->name="John";
-
-
-// $object2=clone $object1;
-// $object2->name="Doe";
-
-// echo $object1->name;
-// echo $object2->name;
-
-
-// class Product {
-//     public $name;
-
-
-//     public function __clone() {
-//         $this->name="Cloned:" .$this->name;
-//     }
-// }
-
-// $product1=new Product();
-// $product1->name="Laptop";
-
-// $product2=clone $product1;
-
-// echo $product1->name ."<br>";
-// echo $product2->name ."<br>";
-
-
-
-
-// class Greetable {
-//     public function greet() {
-//         return "Hello!";
-//     }
-// }
-
-// $object =new class extends Greetable {
-//     public function greet() {
-//         return parent::greet() ;
-//     }
-// };
-
-
-// echo $object->greet();
-
-
-
-
-
-
-
-// $yeniKlass =new class("Merhaba nasilsiniz") {
-
-//     public $name;
-
-//     public function __construct($deyer)
-//     {
-//         $this->name=$deyer;
-//     }
-
-//     public function getName() 
-//     {
-//         return $this->name;
-//     }
-    
-// };
-
-
-// echo $yeniKlass->getName();
-
-// use MyApp\Game\Player\Player;
-
-
-// require_once realpath ('vendor/autoload.php');
-
-
-// $player = new Player();
-
-// $gameController =new \MyApp\Game\GameController();
+echo "Hazirki vaxt (Baki):" .$timeHelper->getCurrentTime() ."<br>";
