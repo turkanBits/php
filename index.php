@@ -1,24 +1,38 @@
 <?php
 
+class ApiClient
+{
 
+    private $baseUrl;
+    
+    public function __construct($baseUrl)
+    {
+        $this->baseUrl=$baseUrl;
+    }
 
-$url = "https://api.example.com/protected-data";
+    public function get($endpoint)
+    {
 
-$token = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMjM0NSIsImV4cCI6MTc4MjkzNTc2MH0.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
+        $url=$this->baseUrl . $endpoint;
 
-$ch = curl_init();
+        // echo $url;
+        $ch=curl_init($url);
+        curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
 
-curl_setopt($ch, CURLOPT_URL,                   $url     );
-curl_setopt($ch, CURLOPT_RETURNTRANSFER,        true     );
-curl_setopt($ch, CURLOPT_HTTPHEADER,             [
+        $response =curl_exec($ch);
 
-        "Autohorization : $token",
-        "Content-Type:application/json"
+        curl_close($ch);
 
-    ]);
+        return json_decode($response);
+    }
+}
 
-$response = curl_exec($ch);
+$apiClient = new ApiClient('https://v6.exchangerate-api.com/v6/351b53f51aec151c3a55019c/latest/');
 
-$data = json_decode($response, true);
+$data=$apiClient->get("USD");
 
-curl_close($ch);
+echo "<pre>";
+print_r($data->conversion_rates->);
+echo "</pre>";
+
+// echo "1 USD - > EUR " .$data ['conversion_rates']['EUR'] . "<br>";
