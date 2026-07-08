@@ -1,38 +1,33 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
 
-class ApiClient
-{
+    <h1>Currency Exchange</h1>
 
-    private $baseUrl;
+    <input type="number" id="number" placeholder="Mebleg daxil edin">
+
+    <select id="currency">
+        <option value="EUR">EUR</option>
+        <option value="AZN">AZN</option>
+        <option value="GBP">GBP</option>
+    </select>
+
+    <button id ="show_exchange_btn">Hesabla</button>
     
-    public function __construct($baseUrl)
-    {
-        $this->baseUrl=$baseUrl;
-    }
 
-    public function get($endpoint)
-    {
+    <p id="show_exchange">Netice burada gosterilecek...</p>
+    
 
-        $url=$this->baseUrl . $endpoint;
+    <script>
+        document.getElementById("show_exchange_btn").addEventListener("click",function () {
 
-        // echo $url;
-        $ch=curl_init($url);
-        curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
-
-        $response =curl_exec($ch);
-
-        curl_close($ch);
-
-        return json_decode($response);
-    }
-}
-
-$apiClient = new ApiClient('https://v6.exchangerate-api.com/v6/351b53f51aec151c3a55019c/latest/');
-
-$data=$apiClient->get("USD");
-
-// echo "<pre>";
-// print_r($data->conversion_rates->AZN);
-// echo "</pre>";
-
-echo "1 USD - > EUR " .$data->conversion_rates->AZN . "<br>";
+                console.log('duymeni basdiniz');
+        })
+    </script>
+</body>
+</html>
