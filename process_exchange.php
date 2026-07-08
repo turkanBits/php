@@ -38,9 +38,9 @@ $apiClient = new ApiClient('https://v6.exchangerate-api.com/v6/351b53f51aec151c3
 
 $data=$apiClient->get("USD");
 
-if( isset($data['conversion_rates'] ['EUR'])  ) {
+if( isset($data['conversion_rates'] [$currency])  ) {
 
-    $rate = $data['conversion_rates'] ['EUR'];
+    $rate = $data['conversion_rates'] [$currency];
     $covertedAmount = $amount * $rate;
 
     echo json_encode(['covertedAmount' =>round( $covertedAmount ,2)]);

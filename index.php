@@ -38,7 +38,7 @@
                     body: JSON.stringify ( {  amount: amount, currency:currency} )
 
                     }).then(  response => response.json()  ).then( data =>{
-                        console.log(data);
+                       document.getElementById("show_exchange").innerText=`${amount} USD ->${data.covertedAmount} ${currency}`
                     });
                 
 
