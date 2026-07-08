@@ -26,13 +26,19 @@
     <script>
         document.getElementById("show_exchange_btn").addEventListener("click",function () {
 
-            const amount    =    document.getElementById("number").value;
-            const currency  =    document.getElementById("currency").value;
+            const deyer1    =    document.getElementById("number").value;
+            const deyer2  =    document.getElementById("currency").value;
 
-            if(amount && currency) {
+            if(deyer1 && deyer2) {
 
-                console.log(amount);
-                console.log(currency);
+                fetch("process_exchange.php", {
+
+                    method:"POST",
+                    header: {"Content-Type" : "application/json"},
+                    body: JSON.stringify ( {  a: deyer1, b:deyer2} )
+
+                }).then(  response => console.log(response)  );
+                
 
             }else{
                 alert("Xahis olunur ki mebleg ve valyutani secesiniz!");
