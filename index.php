@@ -29,8 +29,15 @@
             const amount    =    document.getElementById("number").value;
             const currency  =    document.getElementById("currency").value;
 
-            console.log(amount);
-            console.log(currency);
+            if(amount && currency) {
+
+                console.log(amount);
+                console.log(currency);
+
+            }else{
+                alert("Xahis olunur ki mebleg ve valyutani secesiniz!");
+            }
+
         })
     </script>
 </body>
