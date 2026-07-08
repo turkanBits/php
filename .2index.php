@@ -23,7 +23,7 @@ class ApiClient
 
         curl_close($ch);
 
-        return json_decode($response);
+        return json_decode($response,true);
     }
 }
 

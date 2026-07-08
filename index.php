@@ -26,18 +26,20 @@
     <script>
         document.getElementById("show_exchange_btn").addEventListener("click",function () {
 
-            const deyer1    =    document.getElementById("number").value;
-            const deyer2  =    document.getElementById("currency").value;
+            const amount    =    document.getElementById("number").value;
+            const currency  =    document.getElementById("currency").value;
 
-            if(deyer1 && deyer2) {
+            if(amount && currency) {
 
                 fetch("process_exchange.php", {
 
                     method:"POST",
                     header: {"Content-Type" : "application/json"},
-                    body: JSON.stringify ( {  a: deyer1, b:deyer2} )
+                    body: JSON.stringify ( {  amount: amount, currency:currency} )
 
-                }).then(  response => console.log(response)  );
+                    }).then(  response => response.json()  ).then( data =>{
+                        console.log(data);
+                    });
                 
 
             }else{
