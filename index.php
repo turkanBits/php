@@ -29,13 +29,18 @@
 
 // defined()
 
-define ("PI",3.14);
+// define ("PI",3.14);
 
-if (defined ("PI") ) {
-    echo "PI deyeri: " . PI;
+// if (defined ("PI") ) {
+//     echo "PI deyeri: " . PI;
 
-} else {
+// } else {
 
-    echo "PI deyeri teyin olunmayib";
+//     echo "PI deyeri teyin olunmayib";
 
-}
+// }
+
+
+
+
+echo sqrt(9);
