@@ -43,4 +43,20 @@
 
 
 
-echo pow(9,2);
+// echo sqrt(9);
+
+// echo pow(9,2);
+
+
+
+
+
+
+// rand()-funksiyasi gosterilen araliqda (ve ya standart olaraq tesadufi) tam eded yaradir.
+
+
+
+$arr = ['red','green','blue','yellow','black','white','orange','purple'];
+
+echo $arr[      rand(0,           count($arr)-1)         ];
+
