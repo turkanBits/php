@@ -60,16 +60,42 @@
 
 // echo $arr[      rand(0,           count($arr)-1)         ];
 
-$length=rand(5,10);
+// $length=rand(5,10);
 
-$array=[];
+// $array=[];
 
-for ($i=0;    $i<$length;     $i++){
+// for ($i=0;    $i<$length;     $i++){
 
-    $array[] = rand(1,100);
+//     $array[] = rand(1,100);
+
+// }
+
+// echo "<pre>";
+//     print_r($array);
+// echo"</pre>";
+
+
+// list()
+
+// $number=[1,2,3];
+
+// list($a,$b,$c)=$number;
+
+// echo $a ."<br>";
+// echo $b ."<br>";
+// echo $c ."<br>";
+
+function getUser() {
+
+
+    return ['John','Doe',30];
+
 
 }
 
-echo "<pre>";
-    print_r($array);
-echo"</pre>";
+
+list($name,$username,$age)=getUser();
+
+echo $name . "<br>";
+echo $username . "<br>";
+echo $age . "<br>";
