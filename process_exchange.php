@@ -48,3 +48,5 @@ if( isset($data['conversion_rates'] [$currency])  ) {
 } else {
       echo json_encode(["error"=>"Mezenne tapilmadi"]);
 }
+
+
