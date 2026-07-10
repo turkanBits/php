@@ -56,7 +56,20 @@
 
 
 
-$arr = ['red','green','blue','yellow','black','white','orange','purple'];
+// $arr = ['red','green','blue','yellow','black','white','orange','purple'];
 
-echo $arr[      rand(0,           count($arr)-1)         ];
+// echo $arr[      rand(0,           count($arr)-1)         ];
 
+$length=rand(5,10);
+
+$array=[];
+
+for ($i=0;    $i<$length;     $i++){
+
+    $array[] = rand(1,100);
+
+}
+
+echo "<pre>";
+    print_r($array);
+echo"</pre>";
