@@ -43,4 +43,4 @@
 
 
 
-echo sqrt(9);
+echo pow(9,2);
