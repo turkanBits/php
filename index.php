@@ -1,6 +1,52 @@
 <?php
 
 
+// nl2br()
+
+// htmlspecialchars()
+
+// \n
+
+
+// "  a as ascd as  "
+
+
+$text = "Bu birinci setrdir.  \n Bu ikinci setrdir.  \n Bu ucuncu setrdir.   \nBu dorduncu setrdir.";
+
+echo nl2br ($text);
+
+
+
+$text2="<div>Bu \"HTM \" metnidir & tehlukesiz deyil.</div>";
+
+
+echo htmlspecialchars($text2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // password_hash()
 
 // password_hash($password,PASSWORD_DEFAULT)
@@ -85,17 +131,17 @@
 // echo $b ."<br>";
 // echo $c ."<br>";
 
-function getUser() {
+// function getUser() {
 
 
-    return ['John','Doe',30];
+//     return ['John','Doe',30];
 
 
-}
+// }
 
 
-list($name,$username,$age)=getUser();
+// list($name,$username,$age)=getUser();
 
-echo $name . "<br>";
-echo $username . "<br>";
-echo $age . "<br>";
+// echo $name . "<br>";
+// echo $username . "<br>";
+// echo $age . "<br>";
