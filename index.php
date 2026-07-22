@@ -27,15 +27,15 @@
 
 // ===
 
-$food = 'cake';
+$age = 18;
 
-$return_value = match( $food ) {
+$return_value = match( true ) {
 
-    'cake' => 'I love cake',
-    'pizza' => 'Pizza is my favorite',
-    'burger' => 'Burgers are delicious!',
-    default=>'i have no preference.',
-
+    $age < 2 => "Baby",
+    $age < 13 => "Child",
+    $age <= 19 => "Teenager",
+    $age >= 40 => "Old adult",
+    $age > 19 => "Young",
 
 };
 
