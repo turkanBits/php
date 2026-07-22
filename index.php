@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <body>
     
@@ -10,7 +10,7 @@
         <button type="submit">yukle</button>
     </form>
 </body>
-</html>
+</html> -->
 
 
 
@@ -22,21 +22,64 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <?php
+
+
+// ===
+
+$food = 'cake';
+
+$return_value = match( $food ) {
+
+    'cake' => 'I love cake',
+    'pizza' => 'Pizza is my favorite',
+    'burger' => 'Burgers are delicious!',
+    default=>'i have no preference.',
+
+
+};
+
+
+echo "<pre>";
+    print_r($return_value);
+echo "</pre>";    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // urlencode()
 
