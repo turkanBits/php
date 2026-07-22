@@ -2,20 +2,29 @@
 <html lang="en">
 <body>
     
-    <form action="process.php"   method="post" >
-        <label for="">Meyveni secin: </label>
+    <form action="process.php"   method="post" enctype="multipart/form-data">
+        <label for="">Fayli secin: </label>
 
-            <select name="fruit[]" multiple id="fruit">
-                <option value="apple">Elma</option>
-                 <option value="banana">muz</option>
-                  <option value="orange">portagal</option>
-            </select>
+          <input id="file" type="file"  name="file" requried> <br> <br>
 
-
-        <button type="submit">Gonder</button>
+        <button type="submit">yukle</button>
     </form>
 </body>
 </html>
+
+
+
+<!-- accept -->
+
+
+
+
+
+
+
+
+
+
 
 
 

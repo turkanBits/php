@@ -2,11 +2,10 @@
 
 if($_SERVER['REQUEST_METHOD' ] === 'POST' ) {
     
-   $selected_fruit = $_POST['fruit'];
+   echo "<pre>";
+      print_r($_FILES['file'] );
+   echo "</pre>" ;  
 
-  foreach($selected_fruit as $fruit) {
-      echo $fruit ."<br>";
-  }
-
+ 
 
 }
