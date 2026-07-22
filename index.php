@@ -5,7 +5,7 @@
     <form action="process.php"   method="post" >
         <label for="">Meyveni secin: </label>
 
-            <select name="fruit" id="fruit">
+            <select name="fruit[]" multiple id="fruit">
                 <option value="apple">Elma</option>
                  <option value="banana">muz</option>
                   <option value="orange">portagal</option>
