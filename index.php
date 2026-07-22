@@ -1,4 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    
+    <form action="process.php"   method="post" >
+        <label for="">Meyveni secin: </label>
+
+            <select name="fruit" id="fruit">
+                <option value="apple">Elma</option>
+                 <option value="banana">muz</option>
+                  <option value="orange">portagal</option>
+            </select>
+
+
+        <button type="submit">Gonder</button>
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
 <?php
+
+// urlencode()
 
 
 // nl2br()
@@ -11,32 +42,16 @@
 // "  a as ascd as  "
 
 
-$text = "Bu birinci setrdir.  \n Bu ikinci setrdir.  \n Bu ucuncu setrdir.   \nBu dorduncu setrdir.";
+// $text = "Bu birinci setrdir.  \n Bu ikinci setrdir.  \n Bu ucuncu setrdir.   \nBu dorduncu setrdir.";
 
-echo nl2br ($text);
-
-
-
-$text2="<div>Bu \"HTM \" metnidir & tehlukesiz deyil.</div>";
-
-
-echo htmlspecialchars($text2);
+// echo nl2br ($text);
 
 
 
+// $text2="<div>Bu \"HTML \" metnidir & tehlukesiz deyil.</div>";
 
 
-
-
-
-
-
-
-
-
-
-
-
+// echo htmlspecialchars($text2);
 
 
 
